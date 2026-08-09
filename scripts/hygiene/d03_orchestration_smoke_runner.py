@@ -2,7 +2,7 @@
 """d03_orchestration_smoke_runner.py — the folded front-end's own smoke suite.
 
 The domain-router was folded into skill-orchestration-os as its routing
-front-end; the OS's smoke suite (scripts/smoke_test.py, 12 tests) proves the
+front-end; the OS's smoke suite (scripts/smoke_test.py, 13 tests) proves the
 whole OS still works — registry, planner (incl. route-aware prompt + wrapped-
 steps normalization), executor (incl. the `route` DAG step + unknown-domain
 rejection), audit, meta-learner, and the `skill-os route --dry-run` CLI.
@@ -81,11 +81,11 @@ def main() -> int:
             "input": f"orchestration-os scripts/smoke_test.py ({SMOKE})",
             "environment": f"domain-router repo @ {REPO}",
             "failure_injected": "none — full OS smoke suite is the regression probe",
-            "expected_behavior": "all 12 OS smoke tests pass (registry, planner incl. route, executor incl. route skill, audit, meta-learner, CLI dry-run)",
+            "expected_behavior": "all 13 OS smoke tests pass (registry, planner incl. route, executor incl. route skill, audit, meta-learner, CLI dry-run, stubbed dispatch)",
             "actual_behavior": f"smoke_test.py not found: {SMOKE}",
             "latency_ms": 0,
             "errors": [f"missing {SMOKE} — orchestration-os smoke suite not present"],
-            "state_before": {"orchestration_os": str(ORCH), "smoke_tests": 12},
+            "state_before": {"orchestration_os": str(ORCH), "smoke_tests": 13},
             "state_after": {"passed": False, "summary": "smoke_test.py missing"},
             "recovery": "n/a — read-only verification",
             "false_repair": False,
@@ -108,7 +108,7 @@ def main() -> int:
 
     combined = (proc.stdout or "") + "\n" + (proc.stderr or "")
     passed = proc.returncode == 0
-    # Evidence line: the smoke suite's "N/12 passed" footer.
+    # Evidence line: the smoke suite's "N/13 passed" footer.
     evidence = [line.strip() for line in combined.splitlines() if re.search(r"\d+/\d+ passed", line)]
     summary = evidence[-1] if evidence else f"smoke exit {proc.returncode}"
 
@@ -117,14 +117,14 @@ def main() -> int:
         "experiment_id": "d03_orchestration_smoke",
         "artifact": str(out),
         "skill": "regression-hygiene",
-        "input": "orchestration-os scripts/smoke_test.py (12 tests: registry, planner, executor incl. route skill, audit, meta-learner, CLI dry-run)",
+        "input": "orchestration-os scripts/smoke_test.py (13 tests: registry, planner, executor incl. route skill, audit, meta-learner, CLI dry-run, stubbed dispatch)",
         "environment": f"domain-router repo @ {REPO}",
         "failure_injected": "none — full OS smoke suite is the regression probe",
-        "expected_behavior": "all 12 OS smoke tests pass (0-spend; uses --domain + dry-run only)",
+        "expected_behavior": "all 13 OS smoke tests pass (0-spend; uses --domain + dry-run only)",
         "actual_behavior": f"exit={proc.returncode} {summary}",
         "latency_ms": latency_ms,
         "errors": [] if passed else [(proc.stderr or "")[-300:]],
-        "state_before": {"orchestration_os": str(ORCH), "smoke_tests": 12, "zero_spend": True, "env_scrubbed": list(ZERO_SPEND_ENV_VARS)},
+        "state_before": {"orchestration_os": str(ORCH), "smoke_tests": 13, "zero_spend": True, "env_scrubbed": list(ZERO_SPEND_ENV_VARS)},
         "state_after": {"exit": proc.returncode, "passed": passed, "summary": summary},
         "recovery": "n/a — read-only verification",
         "false_repair": False,

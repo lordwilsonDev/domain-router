@@ -11,9 +11,13 @@
     "d03_orchestration_smoke": {
       "skill": "regression-hygiene",
       "runner": "d03_orchestration_smoke_runner.py"
+    },
+    "d04_routing_accuracy": {
+      "skill": "regression-hygiene",
+      "runner": "d04_routing_accuracy_runner.py"
     }
   },
   "live_auth": false,
   "pytest_target": "test_router.py",
-  "note": "Pure-CLI tool (no server/daemon), so the factory's live-auth probe is scoped out. The routing table (domains.json) is verified on every rebuild by d01; the 23 unit tests are re-run by d02; the folded front-end's own OS smoke suite (12 tests) is re-run by d03. pytest_target overrides the factory's default 'tests/' because this repo keeps its tests at the root."
+  "note": "Pure-CLI tool (no server/daemon), so the factory's live-auth probe is scoped out. The routing table (domains.json) is verified on every rebuild by d01; the 23 unit tests are re-run by d02; the folded front-end's own OS smoke suite (13 tests) is re-run by d03; and routing accuracy over the hand-labeled 25-case fixture (replay, zero-spend, gated at 0.8) is enforced by d04 — the standing guard that routing quality does not silently drift when descriptions or skills change. pytest_target overrides the factory's default 'tests/' because this repo keeps its tests at the root."
 }

@@ -12,8 +12,11 @@ Experiments (serverless — this is a pure CLI tool, no daemon to probe):
                           assert §11-1 invariants (no blanks/dups/hidden,
                           deterministic)
   d02_test_suite          pytest test_router.py (23 unit tests) at repo root
-  d03_orchestration_smoke orchestration-os scripts/smoke_test.py (12 tests,
+  d03_orchestration_smoke orchestration-os scripts/smoke_test.py (13 tests,
                           zero-spend) — proves the folded front-end + OS still work
+  d04_routing_accuracy  hand-labeled 25-case fixture through the real
+                          classifier; top-1 accuracy gated at 0.8 (replay,
+                          zero-spend) — the standing routing-quality guard
 
 Usage:
     python hygiene_runner.py --all                 # run every experiment
@@ -47,6 +50,7 @@ EXPERIMENTS: dict[str, Path] = {
     "d01_registry_integrity": HERE / "d01_registry_integrity_runner.py",
     "d02_test_suite": HERE / "d02_test_suite_runner.py",
     "d03_orchestration_smoke": HERE / "d03_orchestration_smoke_runner.py",
+    "d04_routing_accuracy": HERE / "d04_routing_accuracy_runner.py",
 }
 
 _WEIGHT = {"fail": 0, "partial": 1, "blocked": 2, "pass": 3, "unknown": 4}
