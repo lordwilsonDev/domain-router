@@ -86,15 +86,15 @@ def main() -> int:
             "latency_ms": 0,
             "errors": [f"missing {SMOKE} — orchestration-os smoke suite not present"],
             "state_before": {"orchestration_os": str(ORCH), "smoke_tests": 13},
-            "state_after": {"passed": False, "summary": "smoke_test.py missing"},
-            "recovery": "n/a — read-only verification",
+            "state_after": {"passed": False, "reason": "blocked"},
+            "recovery": "install skill-orchestration-os at ~/.hermes/skills or point ORCH_OS at it",
             "false_repair": False,
             "evidence": [f"missing {SMOKE}"],
-            "verdict": "fail",
+            "verdict": "blocked",  # same semantics as d04: runtime unavailable, gate cannot run
         }
         out.write_text(json.dumps(artifact, indent=2), encoding="utf-8")
         print(json.dumps(artifact, indent=2))
-        return 1
+        return 2
 
     try:
         proc = subprocess.run(

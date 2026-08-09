@@ -11,13 +11,17 @@ that gates at a threshold.
 Modes:
   replay (default, zero-spend)  Recorded DeepSeek responses
       (recorded_responses.jsonl) are replayed through the current
-      prompt-builder + parser. Guards the parse pipeline and the reference
-      accuracy. NEVER calls DeepSeek — even with a leaked key in the
-      environment, replay mode never touches the transport.
+      prompt-builder + parser. Each recording carries the sha256 of the
+      exact prompt it answered; if the current prompt differs (ANY skill
+      description/registry change), the recording is STALE and the case
+      fails with "re-run --live" — so replay genuinely catches description
+      drift at zero spend, not just parse regressions. NEVER calls DeepSeek.
   --live                        Calls the REAL DeepSeek classifier for each
-      fixture case and re-records the raw responses (idempotent re-seed).
-      The ONLY mode that spends; explicit, and requires DEEPSEEK_API_KEY
-      (env or ~/.hermes/.env).
+      fixture case and re-records raw responses + prompt hashes (idempotent
+      re-seed; previous recordings are kept for any case that fails). The
+      ONLY mode that spends; explicit, and requires DEEPSEEK_API_KEY (env or
+      ~/.hermes/.env). Run directly, NOT via hygiene_runner --all (the index
+      times out at 300s; a live run is slower).
 
 Fixture drift is a failure: every expected_skill_id must still exist in the
 current registry, so renaming/removing a skill fails the gate loudly.
@@ -30,6 +34,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import json
 import os
 import sys
@@ -76,14 +81,18 @@ def _load_cases(path: Path) -> list[dict]:
     return cases
 
 
-def _load_recorded(path: Path) -> dict[str, str]:
-    recorded: dict[str, str] = {}
+def _load_recorded(path: Path) -> dict[str, dict]:
+    """id -> {prompt_hash, response}."""
+    recorded: dict[str, dict] = {}
     if path.exists():
         for line in path.read_text(encoding="utf-8").splitlines():
             line = line.strip()
             if line:
                 entry = json.loads(line)
-                recorded[entry["id"]] = entry["response"]
+                recorded[entry["id"]] = {
+                    "prompt_hash": entry.get("prompt_hash", ""),
+                    "response": entry["response"],
+                }
     return recorded
 
 
@@ -182,15 +191,28 @@ def main() -> int:
         cid = case["id"]
         task = case["task"]
         prompt = _deepseek_prompt(task, registry)
+        prompt_hash = hashlib.sha256(prompt.encode("utf-8")).hexdigest()
         try:
             if live:
-                raw = strip_fences(_post_deepseek(prompt, _deepseek_key()))
-                new_recorded[cid] = raw
+                raw = None
+                last_err = None
+                for _attempt in range(2):  # one retry absorbs transient network blips
+                    try:
+                        raw = strip_fences(_post_deepseek(prompt, _deepseek_key()))
+                        break
+                    except Exception as exc:  # noqa: BLE001
+                        last_err = exc
+                if raw is None:
+                    raise last_err or RuntimeError("live call failed")
+                new_recorded[cid] = {"prompt_hash": prompt_hash, "response": raw}
                 parsed = _parse_response(raw, strip_fences)
             else:
                 if cid not in recorded:
                     raise ValueError(f"no recorded response for {cid} — seed with --live first")
-                parsed = _parse_response(recorded[cid], strip_fences)
+                entry = recorded[cid]
+                if entry.get("prompt_hash") != prompt_hash:
+                    raise ValueError("prompt changed since recording (description/skill drift) — re-run --live to re-record")
+                parsed = _parse_response(entry["response"], strip_fences)
         except Exception as exc:  # noqa: BLE001
             per_case.append({
                 "id": cid, "task": task, "expected": case["expected_skill_id"],
@@ -215,10 +237,14 @@ def main() -> int:
     tricky_acc = (sum(1 for p in tricky if p["ok"]) / len(tricky)) if tricky else None
 
     if live:
-        recorded_path = args.recorded
-        with recorded_path.open("w", encoding="utf-8") as fh:
-            for cid in sorted(new_recorded):
-                fh.write(json.dumps({"id": cid, "response": new_recorded[cid]}) + "\n")
+        # Merge: keep the previous recording for any case that failed this
+        # run, so a transient blip can't destroy the reference set.
+        merged = dict(recorded)
+        for cid, entry in new_recorded.items():
+            merged[cid] = entry
+        with args.recorded.open("w", encoding="utf-8") as fh:
+            for cid in sorted(merged):
+                fh.write(json.dumps({"id": cid, **merged[cid]}) + "\n")
 
     passed = (not drift_errors) and accuracy >= args.threshold
     latency_ms = int((time.perf_counter() - started) * 1000)
