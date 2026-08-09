@@ -1,0 +1,2950 @@
+{
+  "generated_at": "2026-08-09T20:08:33+00:00",
+  "count": 362,
+  "containers": [
+    "ai-systems-field-consultant",
+    "apple",
+    "architecture",
+    "automation",
+    "autonomous-ai-agents",
+    "business",
+    "code-reviewer",
+    "computer-use",
+    "continuation-packet",
+    "creative",
+    "data-science",
+    "ecc-agent-template",
+    "email",
+    "engineering",
+    "experimental-emotional-super-intelligence",
+    "freight-researcher",
+    "github",
+    "hermes-desktop-plugins",
+    "local-ai-cluster",
+    "mattpocock-skills",
+    "media",
+    "mermes-research-audit-engine",
+    "mlops",
+    "note-taking",
+    "personal-memory-os",
+    "philosophy",
+    "platform",
+    "productivity",
+    "research",
+    "security",
+    "skill-orchestration",
+    "skill-orchestration-os",
+    "smart-home",
+    "social-media",
+    "software-architecture",
+    "software-development",
+    "sovereign-architecture",
+    "sovereign-mcp-intelligence-gateway",
+    "sovereign-prompt-architect",
+    "sovereignty",
+    "srse-deliverables",
+    "strategy",
+    "testing",
+    "vault-reuse-audit",
+    "vault-search",
+    "yuanbao"
+  ],
+  "skills": [
+    {
+      "skill_id": "ai-systems-field-consultant",
+      "name": "AI Systems Field Consultant",
+      "description": "Diagnose unfamiliar systems and design minimum experiments before prescribing AI.",
+      "container": "ai-systems-field-consultant",
+      "dir": "/Users/lordwilson/.hermes/skills/ai-systems-field-consultant",
+      "skill_md": "/Users/lordwilson/.hermes/skills/ai-systems-field-consultant/SKILL.md"
+    },
+    {
+      "skill_id": "apple/apple-notes",
+      "name": "apple-notes",
+      "description": "Manage Apple Notes via memo CLI: create, search, edit.",
+      "container": "apple",
+      "dir": "/Users/lordwilson/.hermes/skills/apple/apple-notes",
+      "skill_md": "/Users/lordwilson/.hermes/skills/apple/apple-notes/SKILL.md"
+    },
+    {
+      "skill_id": "apple/apple-reminders",
+      "name": "apple-reminders",
+      "description": "Apple Reminders via remindctl: add, list, complete.",
+      "container": "apple",
+      "dir": "/Users/lordwilson/.hermes/skills/apple/apple-reminders",
+      "skill_md": "/Users/lordwilson/.hermes/skills/apple/apple-reminders/SKILL.md"
+    },
+    {
+      "skill_id": "apple/findmy",
+      "name": "findmy",
+      "description": "Track Apple devices/AirTags via FindMy.app on macOS.",
+      "container": "apple",
+      "dir": "/Users/lordwilson/.hermes/skills/apple/findmy",
+      "skill_md": "/Users/lordwilson/.hermes/skills/apple/findmy/SKILL.md"
+    },
+    {
+      "skill_id": "apple/imessage",
+      "name": "imessage",
+      "description": "Send and receive iMessages/SMS via the imsg CLI on macOS.",
+      "container": "apple",
+      "dir": "/Users/lordwilson/.hermes/skills/apple/imessage",
+      "skill_md": "/Users/lordwilson/.hermes/skills/apple/imessage/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/architecture-wiki",
+      "name": "architecture-wiki",
+      "description": "Search/filter Obsidian vault wiki folders with YAML frontmatter. Use when querying architecture, talent, or any entity store. (architecture)",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/architecture-wiki",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/architecture-wiki/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/cognitive-compiler",
+      "name": "cognitive-compiler",
+      "description": "Compile professions into self-improving agent architectures.",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/cognitive-compiler",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/cognitive-compiler/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/local-ai-runtime",
+      "name": "local-ai-runtime",
+      "description": "Wire local inference backends into agent runtimes.",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/local-ai-runtime",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/local-ai-runtime/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/master-wiring-harness",
+      "name": "master-wiring-harness",
+      "description": ">",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/master-wiring-harness",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/master-wiring-harness/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/moie-framework",
+      "name": "moie-framework",
+      "description": "Recursive inversion loop for dynamic goal discovery.",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/moie-framework",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/moie-framework/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/moie-meta-analysis",
+      "name": "moie-meta-analysis",
+      "description": ">",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/moie-meta-analysis",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/moie-meta-analysis/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/msb-studio",
+      "name": "msb-studio",
+      "description": ">",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/msb-studio",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/msb-studio/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/msb-v2-harness-pattern",
+      "name": "msb-v2-harness-pattern",
+      "description": ">",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/msb-v2-harness-pattern",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/msb-v2-harness-pattern/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/operational-proving-ground",
+      "name": "operational-proving-ground",
+      "description": ">",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/operational-proving-ground",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/operational-proving-ground/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/rasa-x",
+      "name": "rasa-x",
+      "description": ">",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/rasa-x",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/rasa-x/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/resource-sourcing-harness",
+      "name": "resource-sourcing-harness",
+      "description": ">",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/resource-sourcing-harness",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/resource-sourcing-harness/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/s2c2-curriculum-compiler",
+      "name": "s2c2-curriculum-compiler",
+      "description": ">",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/s2c2-curriculum-compiler",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/s2c2-curriculum-compiler/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/sovereign-github-harness",
+      "name": "sovereign-github-harness",
+      "description": ">",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/sovereign-github-harness",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/sovereign-github-harness/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/sovereign-integrator",
+      "name": "sovereign-integrator",
+      "description": ">",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/sovereign-integrator",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/sovereign-integrator/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/sovereign-local-ai",
+      "name": "sovereign-local-ai",
+      "description": ">",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/sovereign-local-ai",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/sovereign-local-ai/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/sovereign-mission-execution",
+      "name": "sovereign-mission-execution",
+      "description": ">",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/sovereign-mission-execution",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/sovereign-mission-execution/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/sovereign-predator-intel",
+      "name": "sovereign-predator-intel",
+      "description": ">",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/sovereign-predator-intel",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/sovereign-predator-intel/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/sovereign-quality-assurance",
+      "name": "sovereign-quality-assurance",
+      "description": ">",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/sovereign-quality-assurance",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/sovereign-quality-assurance/SKILL.md"
+    },
+    {
+      "skill_id": "architecture/sovereign-self-sourcing-learning",
+      "name": "sovereign-self-sourcing-learning",
+      "description": ">",
+      "container": "architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/architecture/sovereign-self-sourcing-learning",
+      "skill_md": "/Users/lordwilson/.hermes/skills/architecture/sovereign-self-sourcing-learning/SKILL.md"
+    },
+    {
+      "skill_id": "automation/local-n8n-integration",
+      "name": "local-n8n-integration",
+      "description": "Use when wiring local n8n to APIs, webhooks, and cron jobs.",
+      "container": "automation",
+      "dir": "/Users/lordwilson/.hermes/skills/automation/local-n8n-integration",
+      "skill_md": "/Users/lordwilson/.hermes/skills/automation/local-n8n-integration/SKILL.md"
+    },
+    {
+      "skill_id": "automation/n8n-workflow-automation",
+      "name": "n8n-workflow-automation",
+      "description": "Local n8n setup, import, webhooks, integration.",
+      "container": "automation",
+      "dir": "/Users/lordwilson/.hermes/skills/automation/n8n-workflow-automation",
+      "skill_md": "/Users/lordwilson/.hermes/skills/automation/n8n-workflow-automation/SKILL.md"
+    },
+    {
+      "skill_id": "automation/paperclip-integration",
+      "name": "paperclip-integration",
+      "description": "Wire Hermes Agent into Paperclip as a managed employee.",
+      "container": "automation",
+      "dir": "/Users/lordwilson/.hermes/skills/automation/paperclip-integration",
+      "skill_md": "/Users/lordwilson/.hermes/skills/automation/paperclip-integration/SKILL.md"
+    },
+    {
+      "skill_id": "autonomous-ai-agents/bounded-mission-handoff",
+      "name": "bounded-mission-handoff",
+      "description": "Frozen spec to bounded AI handoff with objective criteria.",
+      "container": "autonomous-ai-agents",
+      "dir": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/bounded-mission-handoff",
+      "skill_md": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/bounded-mission-handoff/SKILL.md"
+    },
+    {
+      "skill_id": "autonomous-ai-agents/claude-code",
+      "name": "claude-code",
+      "description": "Delegate coding to Claude Code CLI (features, PRs).",
+      "container": "autonomous-ai-agents",
+      "dir": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/claude-code",
+      "skill_md": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/claude-code/SKILL.md"
+    },
+    {
+      "skill_id": "autonomous-ai-agents/codex",
+      "name": "codex",
+      "description": "Delegate coding to OpenAI Codex CLI (features, PRs).",
+      "container": "autonomous-ai-agents",
+      "dir": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/codex",
+      "skill_md": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/codex/SKILL.md"
+    },
+    {
+      "skill_id": "autonomous-ai-agents/deterministic-agent-handshake",
+      "name": "deterministic-agent-handshake",
+      "description": "Use for Hermes \u2194 Claude Code file handoff with atomic locks.",
+      "container": "autonomous-ai-agents",
+      "dir": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/deterministic-agent-handshake",
+      "skill_md": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/deterministic-agent-handshake/SKILL.md"
+    },
+    {
+      "skill_id": "autonomous-ai-agents/dynamic-workflow",
+      "name": "dynamic-workflow",
+      "description": "Orchestrate large fan-out work as a plan-in-code \"workflow\" so the agent's context holds only the final verified answer, not the exhaust of hundreds of intermediate steps. Use for codebase-wide sweeps, large migrations, multi-angle research, and any task too big for one context window where the spli",
+      "container": "autonomous-ai-agents",
+      "dir": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/dynamic-workflow",
+      "skill_md": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/dynamic-workflow/SKILL.md"
+    },
+    {
+      "skill_id": "autonomous-ai-agents/hermes-agent",
+      "name": "hermes-agent",
+      "description": "Use, configure, theme, extend, and orchestrate Hermes Agent.",
+      "container": "autonomous-ai-agents",
+      "dir": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/hermes-agent",
+      "skill_md": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/hermes-agent/SKILL.md"
+    },
+    {
+      "skill_id": "autonomous-ai-agents/local-rag-agent-pipeline",
+      "name": "local-rag-agent-pipeline",
+      "description": "Scaffold, test, and run an offline local reasoning pipeline: vector engine + knowledge graph + router \u2192 planner \u2192 orchestrator \u2192 agents \u2192 memory. Use when building a personal cognitive OS, incident assistant, design helper, or any local AI system that learns from past outcomes.",
+      "container": "autonomous-ai-agents",
+      "dir": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/local-rag-agent-pipeline",
+      "skill_md": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/local-rag-agent-pipeline/SKILL.md"
+    },
+    {
+      "skill_id": "autonomous-ai-agents/multi-agent-orchestration",
+      "name": "multi-agent-orchestration",
+      "description": "|",
+      "container": "autonomous-ai-agents",
+      "dir": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/multi-agent-orchestration",
+      "skill_md": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/multi-agent-orchestration/SKILL.md"
+    },
+    {
+      "skill_id": "autonomous-ai-agents/opencode",
+      "name": "opencode",
+      "description": "Delegate coding to OpenCode CLI (features, PR review).",
+      "container": "autonomous-ai-agents",
+      "dir": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/opencode",
+      "skill_md": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/opencode/SKILL.md"
+    },
+    {
+      "skill_id": "autonomous-ai-agents/opencode-local-provider-config",
+      "name": "opencode-local-provider-config",
+      "description": "OpenCode/OpenWorker provider+plugin config on macOS.",
+      "container": "autonomous-ai-agents",
+      "dir": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/opencode-local-provider-config",
+      "skill_md": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/opencode-local-provider-config/SKILL.md"
+    },
+    {
+      "skill_id": "autonomous-ai-agents/rcoh",
+      "name": "rcoh",
+      "description": "|",
+      "container": "autonomous-ai-agents",
+      "dir": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/rcoh",
+      "skill_md": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/rcoh/SKILL.md"
+    },
+    {
+      "skill_id": "autonomous-ai-agents/third-party-repo-integration",
+      "name": "third-party-repo-integration",
+      "description": "Install and wire external repos into Hermes.",
+      "container": "autonomous-ai-agents",
+      "dir": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/third-party-repo-integration",
+      "skill_md": "/Users/lordwilson/.hermes/skills/autonomous-ai-agents/third-party-repo-integration/SKILL.md"
+    },
+    {
+      "skill_id": "business/agent-powered-agency-blueprint",
+      "name": "agent-powered-agency-blueprint",
+      "description": "Build agent-powered solo agencies with Hermes.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/agent-powered-agency-blueprint",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/agent-powered-agency-blueprint/SKILL.md"
+    },
+    {
+      "skill_id": "business/ai-lead-generation",
+      "name": "ai-lead-generation",
+      "description": "Generate qualified, scored leads with personalized outreach.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/ai-lead-generation",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/ai-lead-generation/SKILL.md"
+    },
+    {
+      "skill_id": "business/ai-operations-service-design",
+      "name": "ai-operations-service-design",
+      "description": "Remote-first AI operations service design and architecture.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/ai-operations-service-design",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/ai-operations-service-design/SKILL.md"
+    },
+    {
+      "skill_id": "business/appointment-setting",
+      "name": "appointment-setting",
+      "description": "Convert leads to booked calls with automated follow-up.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/appointment-setting",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/appointment-setting/SKILL.md"
+    },
+    {
+      "skill_id": "business/audit-prep",
+      "name": "audit-prep",
+      "description": "Organize scattered evidence before audits become crises.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/audit-prep",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/audit-prep/SKILL.md"
+    },
+    {
+      "skill_id": "business/blackswan-labz-master-sop",
+      "name": "blackswan-labz-master-sop",
+      "description": "BlackSwanLabz operating system: complete Master SOP v1.0, governing equation, engagement lifecycle, evidence rules, AIL/MoIE, 12-lane research, decision logic, Decision Cards, Do-Nothing product, scope control, data classification, automation readiness, process archaeology, baseline, intervention se",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/blackswan-labz-master-sop",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/blackswan-labz-master-sop/SKILL.md"
+    },
+    {
+      "skill_id": "business/blackswan-labz-operating-system",
+      "name": "blackswan-labz-operating-system",
+      "description": "BlackSwanLabz daily rhythm and manufacturing research.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/blackswan-labz-operating-system",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/blackswan-labz-operating-system/SKILL.md"
+    },
+    {
+      "skill_id": "business/blackswan-labz-ops",
+      "name": "blackswan-labz-ops",
+      "description": "BlackSwanLabz Vault saves, freezes, checks, verification.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/blackswan-labz-ops",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/blackswan-labz-ops/SKILL.md"
+    },
+    {
+      "skill_id": "business/blackswan-labz-system-design",
+      "name": "blackswan-labz-system-design",
+      "description": "BlackSwanLabz end-first design principle.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/blackswan-labz-system-design",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/blackswan-labz-system-design/SKILL.md"
+    },
+    {
+      "skill_id": "business/buh-dna-creator",
+      "name": "buh-dna-creator",
+      "description": ">",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/buh-dna-creator",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/buh-dna-creator/SKILL.md"
+    },
+    {
+      "skill_id": "business/buh-protocol",
+      "name": "buh-protocol",
+      "description": ">",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/buh-protocol",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/buh-protocol/SKILL.md"
+    },
+    {
+      "skill_id": "business/client-churn-prevention",
+      "name": "client-churn-prevention",
+      "description": "Monitor engagement signals and prevent client attrition.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/client-churn-prevention",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/client-churn-prevention/SKILL.md"
+    },
+    {
+      "skill_id": "business/ecommerce-ops-assistant",
+      "name": "ecommerce-ops-assistant",
+      "description": "Daily action lists for inventory and operational issues.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/ecommerce-ops-assistant",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/ecommerce-ops-assistant/SKILL.md"
+    },
+    {
+      "skill_id": "business/home-services-job-ops",
+      "name": "home-services-job-ops",
+      "description": "Automated job packets for crew coordination and follow-up.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/home-services-job-ops",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/home-services-job-ops/SKILL.md"
+    },
+    {
+      "skill_id": "business/medical-growth-ops",
+      "name": "medical-growth-ops",
+      "description": "Non-diagnostic admin layer for patient recalls and bookings.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/medical-growth-ops",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/medical-growth-ops/SKILL.md"
+    },
+    {
+      "skill_id": "business/niche-workflow-generator",
+      "name": "niche-workflow-generator",
+      "description": "Generate Hermes skills for specific business niches.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/niche-workflow-generator",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/niche-workflow-generator/SKILL.md"
+    },
+    {
+      "skill_id": "business/outbound-rev-ops",
+      "name": "outbound-rev-ops",
+      "description": "Clean up CRMs and prevent leads from dying in the cracks.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/outbound-rev-ops",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/outbound-rev-ops/SKILL.md"
+    },
+    {
+      "skill_id": "business/public-data-company-research",
+      "name": "public-data-company-research",
+      "description": "Research companies from public signals into protocol output.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/public-data-company-research",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/public-data-company-research/SKILL.md"
+    },
+    {
+      "skill_id": "business/real-estate-deal-scout",
+      "name": "real-estate-deal-scout",
+      "description": "Automated property monitoring and deal brief construction.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/real-estate-deal-scout",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/real-estate-deal-scout/SKILL.md"
+    },
+    {
+      "skill_id": "business/research-led-service-design",
+      "name": "research-led-service-design",
+      "description": "Research-to-automation service offers for owners.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/research-led-service-design",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/research-led-service-design/SKILL.md"
+    },
+    {
+      "skill_id": "business/rfp-tender-response",
+      "name": "rfp-tender-response",
+      "description": "Monitor opportunities and create submission checklists.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/rfp-tender-response",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/rfp-tender-response/SKILL.md"
+    },
+    {
+      "skill_id": "business/sovereign-academic-builder",
+      "name": "sovereign-academic-builder",
+      "description": ">",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/sovereign-academic-builder",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/sovereign-academic-builder/SKILL.md"
+    },
+    {
+      "skill_id": "business/sovereign-labor-matrix",
+      "name": "sovereign-labor-matrix",
+      "description": "Inversion-based labor filter for pivots and sell targets.",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/sovereign-labor-matrix",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/sovereign-labor-matrix/SKILL.md"
+    },
+    {
+      "skill_id": "business/sovereign-stack-business",
+      "name": "sovereign-stack-business",
+      "description": ">",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/sovereign-stack-business",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/sovereign-stack-business/SKILL.md"
+    },
+    {
+      "skill_id": "business/talent-matcher",
+      "name": "talent-matcher",
+      "description": "Match job candidates to role requirements from Obsidian vault markdown with YAML frontmatter. (business)",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/talent-matcher",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/talent-matcher/SKILL.md"
+    },
+    {
+      "skill_id": "business/zero-mass-launch",
+      "name": "zero-mass-launch",
+      "description": ">",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/zero-mass-launch",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/zero-mass-launch/SKILL.md"
+    },
+    {
+      "skill_id": "code-reviewer",
+      "name": "code-reviewer",
+      "description": "Review diffs for security, quality, and correctness.",
+      "container": "code-reviewer",
+      "dir": "/Users/lordwilson/.hermes/skills/code-reviewer",
+      "skill_md": "/Users/lordwilson/.hermes/skills/code-reviewer/SKILL.md"
+    },
+    {
+      "skill_id": "computer-use",
+      "name": "computer-use",
+      "description": "|",
+      "container": "computer-use",
+      "dir": "/Users/lordwilson/.hermes/skills/computer-use",
+      "skill_md": "/Users/lordwilson/.hermes/skills/computer-use/SKILL.md"
+    },
+    {
+      "skill_id": "computer-use/ego-lite-macos",
+      "name": "ego-lite-macos",
+      "description": "Install and drive ego-lite browser automation on macOS.",
+      "container": "computer-use",
+      "dir": "/Users/lordwilson/.hermes/skills/computer-use/ego-lite-macos",
+      "skill_md": "/Users/lordwilson/.hermes/skills/computer-use/ego-lite-macos/SKILL.md"
+    },
+    {
+      "skill_id": "computer-use/vy-nexus-physical-agency",
+      "name": "vy-nexus-physical-agency",
+      "description": "VY-NEXUS physical agency stack: macOS screen capture, mouse/keyboard control, app automation, intelligent screen agent, and autonomous workflow execution via cliclick/PyAutoGUI/screencapture.",
+      "container": "computer-use",
+      "dir": "/Users/lordwilson/.hermes/skills/computer-use/vy-nexus-physical-agency",
+      "skill_md": "/Users/lordwilson/.hermes/skills/computer-use/vy-nexus-physical-agency/SKILL.md"
+    },
+    {
+      "skill_id": "continuation-packet",
+      "name": "continuation-packet",
+      "description": "Create structured project state artifacts for deterministic resume across chat sessions. Use when wrapping up work, after a major milestone, or when asked to preserve project state for later continuation.",
+      "container": "continuation-packet",
+      "dir": "/Users/lordwilson/.hermes/skills/continuation-packet",
+      "skill_md": "/Users/lordwilson/.hermes/skills/continuation-packet/SKILL.md"
+    },
+    {
+      "skill_id": "creative/architecture-diagram",
+      "name": "architecture-diagram",
+      "description": "Dark-themed SVG architecture/cloud/infra diagrams as HTML.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/architecture-diagram",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/architecture-diagram/SKILL.md"
+    },
+    {
+      "skill_id": "creative/ascii-art",
+      "name": "ascii-art",
+      "description": "ASCII art: pyfiglet, cowsay, boxes, image-to-ascii.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/ascii-art",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/ascii-art/SKILL.md"
+    },
+    {
+      "skill_id": "creative/ascii-video",
+      "name": "ascii-video",
+      "description": "ASCII video: convert video/audio to colored ASCII MP4/GIF.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/ascii-video",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/ascii-video/SKILL.md"
+    },
+    {
+      "skill_id": "creative/baoyu-infographic",
+      "name": "baoyu-infographic",
+      "description": "Infographics: 21 layouts x 21 styles (\u4fe1\u606f\u56fe, \u53ef\u89c6\u5316).",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/baoyu-infographic",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/baoyu-infographic/SKILL.md"
+    },
+    {
+      "skill_id": "creative/blender-mcp",
+      "name": "blender-mcp",
+      "description": "Drive Blender via the catalog blender MCP, with bpy recipes.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/blender-mcp",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/blender-mcp/SKILL.md"
+    },
+    {
+      "skill_id": "creative/claude-design",
+      "name": "claude-design",
+      "description": "Design one-off HTML artifacts (landing, deck, prototype).",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/claude-design",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/claude-design/SKILL.md"
+    },
+    {
+      "skill_id": "creative/comfyui",
+      "name": "comfyui",
+      "description": "Generate images, video, and audio via diffusion workflows.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/comfyui",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/comfyui/SKILL.md"
+    },
+    {
+      "skill_id": "creative/design-md",
+      "name": "design-md",
+      "description": "Author/validate/export Google's DESIGN.md token spec files.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/design-md",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/design-md/SKILL.md"
+    },
+    {
+      "skill_id": "creative/excalidraw",
+      "name": "excalidraw",
+      "description": "Hand-drawn Excalidraw JSON diagrams (arch, flow, seq).",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/excalidraw",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/excalidraw/SKILL.md"
+    },
+    {
+      "skill_id": "creative/humanizer",
+      "name": "humanizer",
+      "description": "Humanize text: strip AI-isms and add real voice.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/humanizer",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/humanizer/SKILL.md"
+    },
+    {
+      "skill_id": "creative/hyperframes",
+      "name": "hyperframes",
+      "description": "Render MP4/WebM videos from HTML compositions.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/hyperframes",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/hyperframes/SKILL.md"
+    },
+    {
+      "skill_id": "creative/local-campaign-media-pipeline",
+      "name": "local-campaign-media-pipeline",
+      "description": "Local image/video generation pipeline for social campaigns. Uses ComfyUI + SD 1.5 for images and Manim CE for programmatic video. Designed for free, offline-first creative production on Apple Silicon.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/local-campaign-media-pipeline",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/local-campaign-media-pipeline/SKILL.md"
+    },
+    {
+      "skill_id": "creative/local-media-pipeline",
+      "name": "local-media-pipeline",
+      "description": "Free local image/video generation stack for macOS. Covers Ollama (text/prompts), ComfyUI (images), Manim CE (videos), hardware constraints, ven isolation, and M-series Metal tuning.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/local-media-pipeline",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/local-media-pipeline/SKILL.md"
+    },
+    {
+      "skill_id": "creative/manim-video",
+      "name": "manim-video",
+      "description": "Manim CE animations: 3Blue1Brown math/algo videos.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/manim-video",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/manim-video/SKILL.md"
+    },
+    {
+      "skill_id": "creative/p5js",
+      "name": "p5js",
+      "description": "p5.js sketches: gen art, shaders, interactive, 3D.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/p5js",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/p5js/SKILL.md"
+    },
+    {
+      "skill_id": "creative/popular-web-designs",
+      "name": "popular-web-designs",
+      "description": "54 real design systems (Stripe, Linear, Vercel) as HTML/CSS.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/popular-web-designs",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/popular-web-designs/SKILL.md"
+    },
+    {
+      "skill_id": "creative/pretext",
+      "name": "pretext",
+      "description": "Build creative browser demos with DOM-free text layout.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/pretext",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/pretext/SKILL.md"
+    },
+    {
+      "skill_id": "creative/sketch",
+      "name": "sketch",
+      "description": "Throwaway HTML mockups: 2-3 design variants to compare.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/sketch",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/sketch/SKILL.md"
+    },
+    {
+      "skill_id": "creative/songwriting-and-ai-music",
+      "name": "songwriting-and-ai-music",
+      "description": "Songwriting craft and Suno AI music prompts.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/songwriting-and-ai-music",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/songwriting-and-ai-music/SKILL.md"
+    },
+    {
+      "skill_id": "creative/touchdesigner-mcp",
+      "name": "touchdesigner-mcp",
+      "description": "Control TouchDesigner via twozero MCP.",
+      "container": "creative",
+      "dir": "/Users/lordwilson/.hermes/skills/creative/touchdesigner-mcp",
+      "skill_md": "/Users/lordwilson/.hermes/skills/creative/touchdesigner-mcp/SKILL.md"
+    },
+    {
+      "skill_id": "data-science/jupyter-live-kernel",
+      "name": "jupyter-live-kernel",
+      "description": "Iterative Python via live Jupyter kernel (hamelnb).",
+      "container": "data-science",
+      "dir": "/Users/lordwilson/.hermes/skills/data-science/jupyter-live-kernel",
+      "skill_md": "/Users/lordwilson/.hermes/skills/data-science/jupyter-live-kernel/SKILL.md"
+    },
+    {
+      "skill_id": "ecc-agent-template",
+      "name": "ecc-agent-template",
+      "description": "ECC-pattern agent/skill template for Hermes. Use when authoring new agent specs, review skills, or hook-based governance skills.",
+      "container": "ecc-agent-template",
+      "dir": "/Users/lordwilson/.hermes/skills/ecc-agent-template",
+      "skill_md": "/Users/lordwilson/.hermes/skills/ecc-agent-template/SKILL.md"
+    },
+    {
+      "skill_id": "email/agentmail",
+      "name": "agentmail",
+      "description": "Give the agent its own dedicated email inbox via AgentMail. Send, receive, and manage email autonomously using agent-owned email addresses (e.g. hermes-agent@agentmail.to).",
+      "container": "email",
+      "dir": "/Users/lordwilson/.hermes/skills/email/agentmail",
+      "skill_md": "/Users/lordwilson/.hermes/skills/email/agentmail/SKILL.md"
+    },
+    {
+      "skill_id": "email/himalaya",
+      "name": "himalaya",
+      "description": "Himalaya CLI: IMAP/SMTP email from terminal.",
+      "container": "email",
+      "dir": "/Users/lordwilson/.hermes/skills/email/himalaya",
+      "skill_md": "/Users/lordwilson/.hermes/skills/email/himalaya/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory",
+      "name": "engineering-hygiene-factory",
+      "description": "Transform software projects into experimentally verified, adversarially tested,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/adversarial-review",
+      "name": "adversarial-review",
+      "description": "Human-level adversarial review of architecture, design, and",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/adversarial-review",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/adversarial-review/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/agent-autonomy",
+      "name": "agent-autonomy",
+      "description": "Verify agent behavior: tool selection, autonomy boundaries,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/agent-autonomy",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/agent-autonomy/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/api-hygiene",
+      "name": "api-hygiene",
+      "description": "Verify API contract stability, versioning, error handling,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/api-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/api-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/audit-hygiene",
+      "name": "audit-hygiene",
+      "description": "Verify audit logs are complete, immutable, tamper-evident,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/audit-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/audit-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/backup-restore",
+      "name": "backup-restore",
+      "description": "Verify backup creation, storage integrity, and restore procedures.",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/backup-restore",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/backup-restore/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/chaos",
+      "name": "chaos",
+      "description": "Verify system behavior under chaotic conditions: random failures,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/chaos",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/chaos/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/codebase-archaeology",
+      "name": "codebase-archaeology",
+      "description": "Map the project structure, languages, frameworks, services, APIs,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/codebase-archaeology",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/codebase-archaeology/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/compatibility-hygiene",
+      "name": "compatibility-hygiene",
+      "description": "Verify behavior across runtime versions, OS versions, architectures,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/compatibility-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/compatibility-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/complexity-reduction",
+      "name": "complexity-reduction",
+      "description": "Identify unnecessary complexity, over-engineering, and",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/complexity-reduction",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/complexity-reduction/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/concurrency-hygiene",
+      "name": "concurrency-hygiene",
+      "description": "Verify thread safety, race condition handling, deadlock freedom,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/concurrency-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/concurrency-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/configuration-hygiene",
+      "name": "configuration-hygiene",
+      "description": "Verify configuration is valid, documented, secure, and behaves",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/configuration-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/configuration-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/data-hygiene",
+      "name": "data-hygiene",
+      "description": "Verify data integrity, schema enforcement, migrations,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/data-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/data-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/dependency-hygiene",
+      "name": "dependency-hygiene",
+      "description": "Verify dependency integrity, license compliance, known vulnerabilities,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/dependency-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/dependency-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/determinism",
+      "name": "determinism",
+      "description": "Verify that deterministic operations produce identical outputs",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/determinism",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/determinism/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/disaster-recovery",
+      "name": "disaster-recovery",
+      "description": "Verify disaster recovery: RTO, RPO, failover, and data",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/disaster-recovery",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/disaster-recovery/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/documentation-hygiene",
+      "name": "documentation-hygiene",
+      "description": "Verify documentation exists, is accurate, and matches code behavior.",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/documentation-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/documentation-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/epistemic-governor",
+      "name": "epistemic-governor",
+      "description": "Prevent the system from confusing metaphors, axioms, hypotheses,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/epistemic-governor",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/epistemic-governor/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/epistemic-hygiene",
+      "name": "epistemic-hygiene",
+      "description": "Classify every claim in a project by its epistemic status to prevent",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/epistemic-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/epistemic-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/evidence-verification",
+      "name": "evidence-verification",
+      "description": "Recursively verify every important claim with command, artifact,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/evidence-verification",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/evidence-verification/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/factory-meta",
+      "name": "factory-meta",
+      "description": "Orchestrate the engineering-hygiene-factory: select which hygiene skills to",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/factory-meta",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/factory-meta/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/failure-injection",
+      "name": "failure-injection",
+      "description": "Actively attempt to break the system through controlled attacks",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/failure-injection",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/failure-injection/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/fuzzing",
+      "name": "fuzzing",
+      "description": "Verify robustness against random, malformed, and edge-case inputs.",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/fuzzing",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/fuzzing/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/human-factors",
+      "name": "human-factors",
+      "description": "Verify system usability, error messages, documentation clarity,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/human-factors",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/human-factors/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/installation-hygiene",
+      "name": "installation-hygiene",
+      "description": "Verify installation, setup, and first-run experience on clean",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/installation-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/installation-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/llm-hygiene",
+      "name": "llm-hygiene",
+      "description": "Verify LLM behavior: prompt sensitivity, output consistency,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/llm-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/llm-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/migration-hygiene",
+      "name": "migration-hygiene",
+      "description": "Verify schema migrations, data migrations, and backward compatibility",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/migration-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/migration-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/mutation-testing",
+      "name": "mutation-testing",
+      "description": "Verify test suite catches seeded faults. Mutation score indicates",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/mutation-testing",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/mutation-testing/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/negative-space",
+      "name": "negative-space",
+      "description": "Verify the system does NOT do things it shouldn't: no silent data",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/negative-space",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/negative-space/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/observability-hygiene",
+      "name": "observability-hygiene",
+      "description": "Verify logs, metrics, traces, alerts, and dashboards exist,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/observability-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/observability-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/performance-hygiene",
+      "name": "performance-hygiene",
+      "description": "Verify latency, throughput, resource usage, and degradation",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/performance-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/performance-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/release-gate",
+      "name": "release-gate",
+      "description": "Determine project readiness for release based on evidence,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/release-gate",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/release-gate/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/repair",
+      "name": "repair",
+      "description": "Execute repairs for findings, verify fixes, and prevent regression.",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/repair",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/repair/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/reproducibility",
+      "name": "reproducibility",
+      "description": "Verify builds, tests, and deployments are deterministic and",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/reproducibility",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/reproducibility/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/requirements-hygiene",
+      "name": "requirements-hygiene",
+      "description": "Verify that project requirements, contracts, and invariants are",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/requirements-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/requirements-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/resource-exhaustion",
+      "name": "resource-exhaustion",
+      "description": "Verify system behavior under resource exhaustion: memory, disk,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/resource-exhaustion",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/resource-exhaustion/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/rollback-hygiene",
+      "name": "rollback-hygiene",
+      "description": "Verify deployment rollback, config rollback, and database rollback",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/rollback-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/rollback-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/scientific-validation",
+      "name": "scientific-validation",
+      "description": "Verify claims using scientific method: hypothesis, experiment,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/scientific-validation",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/scientific-validation/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/security-hygiene",
+      "name": "security-hygiene",
+      "description": "objective: Challenge security claims with adversarial mutations under restorable isolation.",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/security-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/security-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/self-healing",
+      "name": "self-healing",
+      "description": "Verify system can detect and recover from failures with",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/self-healing",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/self-healing/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/state-hygiene",
+      "name": "state-hygiene",
+      "description": "Verify state persistence, recovery, consistency, and idempotency",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/state-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/state-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/test-hygiene",
+      "name": "test-hygiene",
+      "description": "Verify the test suite covers critical paths, is not brittle,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/test-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/test-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/test-the-tests",
+      "name": "test-the-tests",
+      "description": "Verify the test suite itself is correct: no false positives,",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/test-the-tests",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/test-the-tests/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/engineering-hygiene-factory/skills/verification",
+      "name": "verification",
+      "description": "Verify repairs, run regression, and confirm no new issues.",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/verification",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/engineering-hygiene-factory/skills/verification/SKILL.md"
+    },
+    {
+      "skill_id": "engineering/hygiene-experiment-patterns",
+      "name": "hygiene-experiment-patterns",
+      "description": "Reusable hygiene experiment execution patterns.",
+      "container": "engineering",
+      "dir": "/Users/lordwilson/.hermes/skills/engineering/hygiene-experiment-patterns",
+      "skill_md": "/Users/lordwilson/.hermes/skills/engineering/hygiene-experiment-patterns/SKILL.md"
+    },
+    {
+      "skill_id": "experimental-emotional-super-intelligence",
+      "name": "experimental-emotional-super-intelligence",
+      "description": "Experimental emotional + systems intelligence. Use only for deep system/architecture analysis with recursive self-modification and warm emotional framing.",
+      "container": "experimental-emotional-super-intelligence",
+      "dir": "/Users/lordwilson/.hermes/skills/experimental-emotional-super-intelligence",
+      "skill_md": "/Users/lordwilson/.hermes/skills/experimental-emotional-super-intelligence/SKILL.md"
+    },
+    {
+      "skill_id": "freight-researcher",
+      "name": "freight-researcher",
+      "description": "Freight Researcher loop for MSB v2.0. Use for freight/logistics discovery, qualification, coordination, dispatch, scoring, expansion, compliance, fraud checks, and lane dossiers.",
+      "container": "freight-researcher",
+      "dir": "/Users/lordwilson/.hermes/skills/freight-researcher",
+      "skill_md": "/Users/lordwilson/.hermes/skills/freight-researcher/SKILL.md"
+    },
+    {
+      "skill_id": "github/artifact-publishing-repo",
+      "name": "artifact-publishing-repo",
+      "description": "Create a single public GitHub repo for research artifacts.",
+      "container": "github",
+      "dir": "/Users/lordwilson/.hermes/skills/github/artifact-publishing-repo",
+      "skill_md": "/Users/lordwilson/.hermes/skills/github/artifact-publishing-repo/SKILL.md"
+    },
+    {
+      "skill_id": "github/codebase-inspection",
+      "name": "codebase-inspection",
+      "description": "Inspect codebases w/ pygount: LOC, languages, ratios.",
+      "container": "github",
+      "dir": "/Users/lordwilson/.hermes/skills/github/codebase-inspection",
+      "skill_md": "/Users/lordwilson/.hermes/skills/github/codebase-inspection/SKILL.md"
+    },
+    {
+      "skill_id": "github/github-auth",
+      "name": "github-auth",
+      "description": "GitHub auth setup: HTTPS tokens, SSH keys, gh CLI login.",
+      "container": "github",
+      "dir": "/Users/lordwilson/.hermes/skills/github/github-auth",
+      "skill_md": "/Users/lordwilson/.hermes/skills/github/github-auth/SKILL.md"
+    },
+    {
+      "skill_id": "github/github-code-review",
+      "name": "github-code-review",
+      "description": "Review PRs: diffs, inline comments via gh or REST.",
+      "container": "github",
+      "dir": "/Users/lordwilson/.hermes/skills/github/github-code-review",
+      "skill_md": "/Users/lordwilson/.hermes/skills/github/github-code-review/SKILL.md"
+    },
+    {
+      "skill_id": "github/github-issues",
+      "name": "github-issues",
+      "description": "Create, triage, label, assign GitHub issues via gh or REST.",
+      "container": "github",
+      "dir": "/Users/lordwilson/.hermes/skills/github/github-issues",
+      "skill_md": "/Users/lordwilson/.hermes/skills/github/github-issues/SKILL.md"
+    },
+    {
+      "skill_id": "github/github-pr-workflow",
+      "name": "github-pr-workflow",
+      "description": "GitHub PR lifecycle: branch, commit, open, CI, merge.",
+      "container": "github",
+      "dir": "/Users/lordwilson/.hermes/skills/github/github-pr-workflow",
+      "skill_md": "/Users/lordwilson/.hermes/skills/github/github-pr-workflow/SKILL.md"
+    },
+    {
+      "skill_id": "github/github-repo-management",
+      "name": "github-repo-management",
+      "description": "Clone/create/fork repos; manage remotes, releases.",
+      "container": "github",
+      "dir": "/Users/lordwilson/.hermes/skills/github/github-repo-management",
+      "skill_md": "/Users/lordwilson/.hermes/skills/github/github-repo-management/SKILL.md"
+    },
+    {
+      "skill_id": "hermes-desktop-plugins",
+      "name": "hermes-desktop-plugins",
+      "description": "Write desktop app plugins that add UI panes and commands.",
+      "container": "hermes-desktop-plugins",
+      "dir": "/Users/lordwilson/.hermes/skills/hermes-desktop-plugins",
+      "skill_md": "/Users/lordwilson/.hermes/skills/hermes-desktop-plugins/SKILL.md"
+    },
+    {
+      "skill_id": "local-ai-cluster",
+      "name": "local-ai-cluster",
+      "description": "Connect to, monitor, and run tasks across your local AI/agent projects: agent-zero, Sovereign/Vy, OmniCoord, memU/mem0, Godel, ralph-loop, motia-recursive-agent, prefect, LM Studio, Ollama, and other AI folders in ~/.",
+      "container": "local-ai-cluster",
+      "dir": "/Users/lordwilson/.hermes/skills/local-ai-cluster",
+      "skill_md": "/Users/lordwilson/.hermes/skills/local-ai-cluster/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/ask-matt",
+      "name": "mattpocock/engineering/ask-matt",
+      "description": "Ask which skill or flow fits your situation. A router over the skills in this repo.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/ask-matt",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/ask-matt/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/code-review",
+      "name": "mattpocock/engineering/code-review",
+      "description": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes \u2014 Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them ",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/code-review",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/code-review/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/codebase-design",
+      "name": "mattpocock/engineering/codebase-design",
+      "description": "Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/codebase-design",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/codebase-design/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/diagnosing-bugs",
+      "name": "mattpocock/engineering/diagnosing-bugs",
+      "description": "Diagnosis loop for hard bugs and performance regressions. Use when the user says \"diagnose\"/\"debug this\", or reports something broken/throwing/failing/slow.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/diagnosing-bugs",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/diagnosing-bugs/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/domain-modeling",
+      "name": "mattpocock/engineering/domain-modeling",
+      "description": "Build and sharpen a project's domain model. Use when the user wants to pin down domain terminology or a ubiquitous language, record an architectural decision, or when another skill needs to maintain the domain model.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/domain-modeling",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/domain-modeling/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/grill-with-docs",
+      "name": "mattpocock/engineering/grill-with-docs",
+      "description": "A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/grill-with-docs",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/grill-with-docs/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/implement",
+      "name": "mattpocock/engineering/implement",
+      "description": "Implement a piece of work based on a spec or set of tickets.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/implement",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/implement/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/improve-codebase-architecture",
+      "name": "mattpocock/engineering/improve-codebase-architecture",
+      "description": "Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/improve-codebase-architecture",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/improve-codebase-architecture/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/prototype",
+      "name": "mattpocock/engineering/prototype",
+      "description": "Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/prototype",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/prototype/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/research",
+      "name": "mattpocock/engineering/research",
+      "description": "Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/research",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/research/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/resolving-merge-conflicts",
+      "name": "mattpocock/engineering/resolving-merge-conflicts",
+      "description": "Use when you need to resolve an in-progress git merge/rebase conflict.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/resolving-merge-conflicts",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/resolving-merge-conflicts/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/setup-matt-pocock-skills",
+      "name": "mattpocock/engineering/setup-matt-pocock-skills",
+      "description": "Configure this repo for the engineering skills \u2014 set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/setup-matt-pocock-skills",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/setup-matt-pocock-skills/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/tdd",
+      "name": "mattpocock/engineering/tdd",
+      "description": "Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions \"red-green-refactor\", or wants integration tests.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/tdd",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/tdd/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/to-spec",
+      "name": "mattpocock/engineering/to-spec",
+      "description": "Turn the current conversation into a spec and publish it to the project issue tracker \u2014 no interview, just synthesis of what you've already discussed.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/to-spec",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/to-spec/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/to-tickets",
+      "name": "mattpocock/engineering/to-tickets",
+      "description": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker \u2014 edges as text in one file per ticket locally, or native blocking links on a real tracker.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/to-tickets",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/to-tickets/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/triage",
+      "name": "mattpocock/engineering/triage",
+      "description": "Move issues and external PRs through a state machine of triage roles \u2014 categorise, verify, grill if needed, and write agent-ready briefs.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/triage",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/triage/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/wayfinder",
+      "name": "mattpocock/engineering/wayfinder",
+      "description": "Plan a huge chunk of work \u2014 more than one agent session can hold \u2014 as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/wayfinder",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/wayfinder/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/engineering/wizard",
+      "name": "mattpocock/engineering/wizard",
+      "description": "Generate an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover. Don't invoke this for steps the agent can pe",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/wizard",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/engineering/wizard/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/in-progress/claude-handoff",
+      "name": "mattpocock/in-progress/claude-handoff",
+      "description": "Hand the current conversation off to a fresh background agent that picks up the work immediately.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/in-progress/claude-handoff",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/in-progress/claude-handoff/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/in-progress/loop-me",
+      "name": "mattpocock/in-progress/loop-me",
+      "description": "Grill me about specs for the workflows I want to build, within this workspace.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/in-progress/loop-me",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/in-progress/loop-me/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/in-progress/setup-ts-deep-modules",
+      "name": "mattpocock/in-progress/setup-ts-deep-modules",
+      "description": "Wire dependency-cruiser into a TypeScript repo so each package is a deep module \u2014 implementation hidden in subfolders, reachable only through its entry-point files. User-invoked.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/in-progress/setup-ts-deep-modules",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/in-progress/setup-ts-deep-modules/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/in-progress/writing-beats",
+      "name": "mattpocock/in-progress/writing-beats",
+      "description": "Writing, exploit \u2014 assemble raw material into a journey of beats, grounding each term before a beat leans on it.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/in-progress/writing-beats",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/in-progress/writing-beats/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/in-progress/writing-fragments",
+      "name": "mattpocock/in-progress/writing-fragments",
+      "description": "Writing, explore \u2014 mine raw fragments, no structure yet.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/in-progress/writing-fragments",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/in-progress/writing-fragments/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/in-progress/writing-shape",
+      "name": "mattpocock/in-progress/writing-shape",
+      "description": "Writing, exploit \u2014 shape raw material into an article, paragraph by paragraph.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/in-progress/writing-shape",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/in-progress/writing-shape/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/misc/git-guardrails-claude-code",
+      "name": "mattpocock/misc/git-guardrails-claude-code",
+      "description": "Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/misc/git-guardrails-claude-code",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/misc/git-guardrails-claude-code/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/misc/migrate-to-shoehorn",
+      "name": "mattpocock/misc/migrate-to-shoehorn",
+      "description": "Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/misc/migrate-to-shoehorn",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/misc/migrate-to-shoehorn/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/misc/scaffold-exercises",
+      "name": "mattpocock/misc/scaffold-exercises",
+      "description": "Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/misc/scaffold-exercises",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/misc/scaffold-exercises/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/misc/setup-pre-commit",
+      "name": "mattpocock/misc/setup-pre-commit",
+      "description": "Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/misc/setup-pre-commit",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/misc/setup-pre-commit/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/productivity/grill-me",
+      "name": "mattpocock/productivity/grill-me",
+      "description": "A relentless interview to sharpen a plan or design.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/productivity/grill-me",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/productivity/grill-me/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/productivity/grilling",
+      "name": "mattpocock/productivity/grilling",
+      "description": "Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/productivity/grilling",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/productivity/grilling/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/productivity/handoff",
+      "name": "mattpocock/productivity/handoff",
+      "description": "Compact the current conversation into a handoff document for another agent to pick up.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/productivity/handoff",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/productivity/handoff/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/productivity/teach",
+      "name": "mattpocock/productivity/teach",
+      "description": "Teach the user a new skill or concept, within this workspace.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/productivity/teach",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/productivity/teach/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/productivity/to-questionnaire",
+      "name": "mattpocock/productivity/to-questionnaire",
+      "description": "Turn a decision you can't fully answer into a questionnaire for someone else to fill in.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/productivity/to-questionnaire",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/productivity/to-questionnaire/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/productivity/wait-what",
+      "name": "mattpocock/productivity/wait-what",
+      "description": "Stop. That last message did not land \u2014 re-pitch it.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/productivity/wait-what",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/productivity/wait-what/SKILL.md"
+    },
+    {
+      "skill_id": "mattpocock-skills/productivity/writing-for-agents",
+      "name": "mattpocock/productivity/writing-for-agents",
+      "description": "Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md.",
+      "container": "mattpocock-skills",
+      "dir": "/Users/lordwilson/.hermes/skills/mattpocock-skills/productivity/writing-for-agents",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mattpocock-skills/productivity/writing-for-agents/SKILL.md"
+    },
+    {
+      "skill_id": "media/gif-search",
+      "name": "gif-search",
+      "description": "Search/download GIFs from Tenor via curl + jq.",
+      "container": "media",
+      "dir": "/Users/lordwilson/.hermes/skills/media/gif-search",
+      "skill_md": "/Users/lordwilson/.hermes/skills/media/gif-search/SKILL.md"
+    },
+    {
+      "skill_id": "media/heartmula",
+      "name": "heartmula",
+      "description": "HeartMuLa: Suno-like song generation from lyrics + tags.",
+      "container": "media",
+      "dir": "/Users/lordwilson/.hermes/skills/media/heartmula",
+      "skill_md": "/Users/lordwilson/.hermes/skills/media/heartmula/SKILL.md"
+    },
+    {
+      "skill_id": "media/songsee",
+      "name": "songsee",
+      "description": "Audio spectrograms/features (mel, chroma, MFCC) via CLI.",
+      "container": "media",
+      "dir": "/Users/lordwilson/.hermes/skills/media/songsee",
+      "skill_md": "/Users/lordwilson/.hermes/skills/media/songsee/SKILL.md"
+    },
+    {
+      "skill_id": "media/youtube-content",
+      "name": "youtube-content",
+      "description": "YouTube transcripts to summaries, threads, blogs.",
+      "container": "media",
+      "dir": "/Users/lordwilson/.hermes/skills/media/youtube-content",
+      "skill_md": "/Users/lordwilson/.hermes/skills/media/youtube-content/SKILL.md"
+    },
+    {
+      "skill_id": "mermes-research-audit-engine",
+      "name": "mermes-research-audit-engine",
+      "description": "Use for MerMEs RAE v1.0: epistemic audits of papers, whitepapers, designs, policy drafts, business cases, and literature reviews. Output is structured YAML plus human-readable markdown.",
+      "container": "mermes-research-audit-engine",
+      "dir": "/Users/lordwilson/.hermes/skills/mermes-research-audit-engine",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mermes-research-audit-engine/SKILL.md"
+    },
+    {
+      "skill_id": "mlops/benchmark-harness-portability",
+      "name": "benchmark-harness-portability",
+      "description": "Port benchmark harnesses to local LLM backends.",
+      "container": "mlops",
+      "dir": "/Users/lordwilson/.hermes/skills/mlops/benchmark-harness-portability",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mlops/benchmark-harness-portability/SKILL.md"
+    },
+    {
+      "skill_id": "mlops/benchmark-scoring-hygiene",
+      "name": "benchmark-scoring-hygiene",
+      "description": "Empirical model benchmarking without false negatives.",
+      "container": "mlops",
+      "dir": "/Users/lordwilson/.hermes/skills/mlops/benchmark-scoring-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mlops/benchmark-scoring-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "mlops/evaluation/evaluating-llms-harness",
+      "name": "evaluating-llms-harness",
+      "description": "lm-eval-harness: benchmark LLMs (MMLU, GSM8K, etc.).",
+      "container": "mlops",
+      "dir": "/Users/lordwilson/.hermes/skills/mlops/evaluation/evaluating-llms-harness",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mlops/evaluation/evaluating-llms-harness/SKILL.md"
+    },
+    {
+      "skill_id": "mlops/evaluation/weights-and-biases",
+      "name": "weights-and-biases",
+      "description": "W&B: log ML experiments, sweeps, model registry, dashboards.",
+      "container": "mlops",
+      "dir": "/Users/lordwilson/.hermes/skills/mlops/evaluation/weights-and-biases",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mlops/evaluation/weights-and-biases/SKILL.md"
+    },
+    {
+      "skill_id": "mlops/huggingface-hub",
+      "name": "huggingface-hub",
+      "description": "HuggingFace hf CLI: search/download/upload models, datasets.",
+      "container": "mlops",
+      "dir": "/Users/lordwilson/.hermes/skills/mlops/huggingface-hub",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mlops/huggingface-hub/SKILL.md"
+    },
+    {
+      "skill_id": "mlops/huggingface-offline-benchmark",
+      "name": "huggingface-offline-benchmark",
+      "description": "Benchmark scaffold when HF deps/xet block live models.",
+      "container": "mlops",
+      "dir": "/Users/lordwilson/.hermes/skills/mlops/huggingface-offline-benchmark",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mlops/huggingface-offline-benchmark/SKILL.md"
+    },
+    {
+      "skill_id": "mlops/inference/llama-cpp",
+      "name": "llama-cpp",
+      "description": "llama.cpp local GGUF inference + HF Hub model discovery.",
+      "container": "mlops",
+      "dir": "/Users/lordwilson/.hermes/skills/mlops/inference/llama-cpp",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mlops/inference/llama-cpp/SKILL.md"
+    },
+    {
+      "skill_id": "mlops/inference/serving-llms-vllm",
+      "name": "serving-llms-vllm",
+      "description": "vLLM: high-throughput LLM serving, OpenAI API, quantization.",
+      "container": "mlops",
+      "dir": "/Users/lordwilson/.hermes/skills/mlops/inference/serving-llms-vllm",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mlops/inference/serving-llms-vllm/SKILL.md"
+    },
+    {
+      "skill_id": "mlops/local-model-benchmark",
+      "name": "local-model-benchmark",
+      "description": "Local model benchmark workflow: discover/download HF repos, inspect adapters vs base models, and verify runtime inputs before execution.",
+      "container": "mlops",
+      "dir": "/Users/lordwilson/.hermes/skills/mlops/local-model-benchmark",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mlops/local-model-benchmark/SKILL.md"
+    },
+    {
+      "skill_id": "mlops/models/audiocraft",
+      "name": "audiocraft-audio-generation",
+      "description": "AudioCraft: MusicGen text-to-music, AudioGen text-to-sound.",
+      "container": "mlops",
+      "dir": "/Users/lordwilson/.hermes/skills/mlops/models/audiocraft",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mlops/models/audiocraft/SKILL.md"
+    },
+    {
+      "skill_id": "mlops/models/segment-anything",
+      "name": "segment-anything-model",
+      "description": "SAM: zero-shot image segmentation via points, boxes, masks.",
+      "container": "mlops",
+      "dir": "/Users/lordwilson/.hermes/skills/mlops/models/segment-anything",
+      "skill_md": "/Users/lordwilson/.hermes/skills/mlops/models/segment-anything/SKILL.md"
+    },
+    {
+      "skill_id": "note-taking/hermes-second-brain",
+      "name": "hermes-second-brain",
+      "description": "Herm\u00e8s filesystem-based second brain / idea vault. Use when capturing ideas, filing plans, moving workstreams between plans/in-progress/completed, or maintaining the master intake index. For plain markdown capture and retrieval under /Users/lordwilson/hermes-brain/. Distinct from obsidian skill.",
+      "container": "note-taking",
+      "dir": "/Users/lordwilson/.hermes/skills/note-taking/hermes-second-brain",
+      "skill_md": "/Users/lordwilson/.hermes/skills/note-taking/hermes-second-brain/SKILL.md"
+    },
+    {
+      "skill_id": "note-taking/obsidian",
+      "name": "obsidian",
+      "description": "Read, search, create, and edit notes in the Obsidian vault.",
+      "container": "note-taking",
+      "dir": "/Users/lordwilson/.hermes/skills/note-taking/obsidian",
+      "skill_md": "/Users/lordwilson/.hermes/skills/note-taking/obsidian/SKILL.md"
+    },
+    {
+      "skill_id": "note-taking/sovereign-brain",
+      "name": "sovereign-brain",
+      "description": ">",
+      "container": "note-taking",
+      "dir": "/Users/lordwilson/.hermes/skills/note-taking/sovereign-brain",
+      "skill_md": "/Users/lordwilson/.hermes/skills/note-taking/sovereign-brain/SKILL.md"
+    },
+    {
+      "skill_id": "note-taking/vault-archive-mining",
+      "name": "vault-archive-mining",
+      "description": "Find vault conversation transcripts via semantic search.",
+      "container": "note-taking",
+      "dir": "/Users/lordwilson/.hermes/skills/note-taking/vault-archive-mining",
+      "skill_md": "/Users/lordwilson/.hermes/skills/note-taking/vault-archive-mining/SKILL.md"
+    },
+    {
+      "skill_id": "note-taking/vault-frontmatter-labeling",
+      "name": "vault-frontmatter-labeling",
+      "description": "Batch apply YAML frontmatter across Obsidian vault files.",
+      "container": "note-taking",
+      "dir": "/Users/lordwilson/.hermes/skills/note-taking/vault-frontmatter-labeling",
+      "skill_md": "/Users/lordwilson/.hermes/skills/note-taking/vault-frontmatter-labeling/SKILL.md"
+    },
+    {
+      "skill_id": "personal-memory-os/personal-memory-os",
+      "name": "personal-memory-os",
+      "description": ">",
+      "container": "personal-memory-os",
+      "dir": "/Users/lordwilson/.hermes/skills/personal-memory-os/personal-memory-os",
+      "skill_md": "/Users/lordwilson/.hermes/skills/personal-memory-os/personal-memory-os/SKILL.md"
+    },
+    {
+      "skill_id": "philosophy/inversion-is-illumination",
+      "name": "inversion-is-illumination",
+      "description": ">",
+      "container": "philosophy",
+      "dir": "/Users/lordwilson/.hermes/skills/philosophy/inversion-is-illumination",
+      "skill_md": "/Users/lordwilson/.hermes/skills/philosophy/inversion-is-illumination/SKILL.md"
+    },
+    {
+      "skill_id": "platform/agentic-platform-deployment",
+      "name": "agentic-platform-deployment",
+      "description": "Deploy local multi-tenant AI agent platform end-to-end.",
+      "container": "platform",
+      "dir": "/Users/lordwilson/.hermes/skills/platform/agentic-platform-deployment",
+      "skill_md": "/Users/lordwilson/.hermes/skills/platform/agentic-platform-deployment/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/airtable",
+      "name": "airtable",
+      "description": "Airtable REST API via curl. Records CRUD, filters, upserts.",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/airtable",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/airtable/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/blackswan-skill-map",
+      "name": "blackswan-skill-map",
+      "description": ">",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/blackswan-skill-map",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/blackswan-skill-map/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/canvas",
+      "name": "canvas",
+      "description": "Canvas LMS integration \u2014 fetch enrolled courses and assignments using API token authentication.",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/canvas",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/canvas/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/docx",
+      "name": "docx",
+      "description": "Create, read, edit Word .docx documents and templates.",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/docx",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/docx/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/google-workspace",
+      "name": "google-workspace",
+      "description": "Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python.",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/google-workspace",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/google-workspace/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/hermes-gateway-setup",
+      "name": "hermes-gateway-setup",
+      "description": "Configure and troubleshoot Hermes messaging gateway and platform adapters. Covers Telegram bot wiring, allowlist/home-channel setup, PYTHONPATH contamination fix, gateway restart patterns, Paperclip orchestration adapter wiring, and Hermes provider/model auth pitfalls. Use when user asks to connect ",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/hermes-gateway-setup",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/hermes-gateway-setup/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/maps",
+      "name": "maps",
+      "description": "Geocode, POIs, routes, timezones via OpenStreetMap/OSRM.",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/maps",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/maps/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/nano-pdf",
+      "name": "nano-pdf",
+      "description": "Edit text in existing PDFs via natural-language prompts.",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/nano-pdf",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/nano-pdf/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/notion",
+      "name": "notion",
+      "description": "Notion API + ntn CLI: pages, databases, markdown, Workers.",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/notion",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/notion/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/ocr-and-documents",
+      "name": "ocr-and-documents",
+      "description": "Extract text from PDFs/scans (pymupdf, marker-pdf).",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/ocr-and-documents",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/ocr-and-documents/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/operational-execution",
+      "name": "operational-execution",
+      "description": "Blunt, artifact-first operational execution for Sovereign Architect / Operational Diagnostician style. Governs AIL inversion runs, repo intake/bounded evidence artifacts, verification execution, and the 'please continue' pattern.",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/operational-execution",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/operational-execution/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/pdf",
+      "name": "pdf",
+      "description": "Create, merge, split, fill, and secure PDF files.",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/pdf",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/pdf/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/petdex",
+      "name": "petdex",
+      "description": "Install and select animated petdex mascots for Hermes.",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/petdex",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/petdex/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/powerpoint",
+      "name": "powerpoint",
+      "description": "Create, read, edit .pptx decks, slides, notes, templates.",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/powerpoint",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/powerpoint/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/prompt-design-for-domain-experts",
+      "name": "prompt-design-for-domain-experts",
+      "description": ">",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/prompt-design-for-domain-experts",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/prompt-design-for-domain-experts/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/storage-management",
+      "name": "storage-management",
+      "description": "|",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/storage-management",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/storage-management/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/teams-meeting-pipeline",
+      "name": "teams-meeting-pipeline",
+      "description": "Teams meeting summaries, job replay, Graph subscriptions.",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/teams-meeting-pipeline",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/teams-meeting-pipeline/SKILL.md"
+    },
+    {
+      "skill_id": "productivity/xlsx",
+      "name": "xlsx",
+      "description": "Create, read, edit Excel .xlsx spreadsheets and CSVs.",
+      "container": "productivity",
+      "dir": "/Users/lordwilson/.hermes/skills/productivity/xlsx",
+      "skill_md": "/Users/lordwilson/.hermes/skills/productivity/xlsx/SKILL.md"
+    },
+    {
+      "skill_id": "research/ail-blueprint",
+      "name": "ail-blueprint",
+      "description": "Axiom Inversion Logic (AIL) Blueprint for scientific meta-discovery: hidden assumption mining, inversion operators, Propulsion Score, MoIE discovery experts, and MSB/KB4 integration.",
+      "container": "research",
+      "dir": "/Users/lordwilson/.hermes/skills/research/ail-blueprint",
+      "skill_md": "/Users/lordwilson/.hermes/skills/research/ail-blueprint/SKILL.md"
+    },
+    {
+      "skill_id": "research/arxiv",
+      "name": "arxiv",
+      "description": "Search arXiv papers by keyword, author, category, or ID.",
+      "container": "research",
+      "dir": "/Users/lordwilson/.hermes/skills/research/arxiv",
+      "skill_md": "/Users/lordwilson/.hermes/skills/research/arxiv/SKILL.md"
+    },
+    {
+      "skill_id": "research/blogwatcher",
+      "name": "blogwatcher",
+      "description": "Monitor blogs and RSS/Atom feeds via blogwatcher-cli tool.",
+      "container": "research",
+      "dir": "/Users/lordwilson/.hermes/skills/research/blogwatcher",
+      "skill_md": "/Users/lordwilson/.hermes/skills/research/blogwatcher/SKILL.md"
+    },
+    {
+      "skill_id": "research/grounded-citations",
+      "name": "grounded-citations",
+      "description": "Ground answers and documents in cited, verifiable sources.",
+      "container": "research",
+      "dir": "/Users/lordwilson/.hermes/skills/research/grounded-citations",
+      "skill_md": "/Users/lordwilson/.hermes/skills/research/grounded-citations/SKILL.md"
+    },
+    {
+      "skill_id": "research/llm-wiki",
+      "name": "llm-wiki",
+      "description": "Karpathy's LLM Wiki: build/query interlinked markdown KB.",
+      "container": "research",
+      "dir": "/Users/lordwilson/.hermes/skills/research/llm-wiki",
+      "skill_md": "/Users/lordwilson/.hermes/skills/research/llm-wiki/SKILL.md"
+    },
+    {
+      "skill_id": "research/polymarket",
+      "name": "polymarket",
+      "description": "Query Polymarket: markets, prices, orderbooks, history.",
+      "container": "research",
+      "dir": "/Users/lordwilson/.hermes/skills/research/polymarket",
+      "skill_md": "/Users/lordwilson/.hermes/skills/research/polymarket/SKILL.md"
+    },
+    {
+      "skill_id": "research/research-paper-writing",
+      "name": "research-paper-writing",
+      "description": "Write ML papers for NeurIPS/ICML/ICLR: design\u2192submit.",
+      "container": "research",
+      "dir": "/Users/lordwilson/.hermes/skills/research/research-paper-writing",
+      "skill_md": "/Users/lordwilson/.hermes/skills/research/research-paper-writing/SKILL.md"
+    },
+    {
+      "skill_id": "research/white-paper-artifact-workflow",
+      "name": "white-paper-artifact-workflow",
+      "description": "Create/publish white papers as GitHub artifacts.",
+      "container": "research",
+      "dir": "/Users/lordwilson/.hermes/skills/research/white-paper-artifact-workflow",
+      "skill_md": "/Users/lordwilson/.hermes/skills/research/white-paper-artifact-workflow/SKILL.md"
+    },
+    {
+      "skill_id": "security/apk-reverse",
+      "name": "apk-reverse",
+      "description": "\u5728 CLI \u73af\u5883\u4e0b\u505a Android APK \u9006\u5411\u65f6\u4f7f\u7528\u3002\u9002\u7528\u4e8e APK \u89e3\u5305\u3001Java \u53cd\u7f16\u8bd1\u3001smali \u4fee\u6539\u3001\u91cd\u6253\u5305\u3001Frida \u52a8\u6001 Hook\uff0c\u4ee5\u53ca\u6309\u9700\u5207\u6362\u5230 so/native \u5206\u6790\u3002\u4f18\u5148\u4f7f\u7528\u672c\u673a\u5df2\u5b89\u88c5\u7684 jadx\u3001apktool\u3001frida\u3001adb\u3001ida-reverse\u3001radare2\u3002",
+      "container": "security",
+      "dir": "/Users/lordwilson/.hermes/skills/security/apk-reverse",
+      "skill_md": "/Users/lordwilson/.hermes/skills/security/apk-reverse/SKILL.md"
+    },
+    {
+      "skill_id": "security/attack-chain",
+      "name": "attack-chain",
+      "description": "Use for authorized multi-stage attack-path planning and orchestration when a task spans reconnaissance, initial access, privilege escalation, lateral movement, or impact assessment. Route single-stage tasks directly to their specialist skill.",
+      "container": "security",
+      "dir": "/Users/lordwilson/.hermes/skills/security/attack-chain",
+      "skill_md": "/Users/lordwilson/.hermes/skills/security/attack-chain/SKILL.md"
+    },
+    {
+      "skill_id": "security/code-audit",
+      "name": "code-audit",
+      "description": "Use for authorized source-code security review and SAST workflows including Semgrep, CodeQL patterns, dangerous API hunting, and fix verification.",
+      "container": "security",
+      "dir": "/Users/lordwilson/.hermes/skills/security/code-audit",
+      "skill_md": "/Users/lordwilson/.hermes/skills/security/code-audit/SKILL.md"
+    },
+    {
+      "skill_id": "security/llm-security",
+      "name": "llm-security",
+      "description": "Use for authorized security assessment of LLM applications and AI agents, including prompt injection, tool abuse, RAG exposure, memory poisoning, and model supply-chain risks.",
+      "container": "security",
+      "dir": "/Users/lordwilson/.hermes/skills/security/llm-security",
+      "skill_md": "/Users/lordwilson/.hermes/skills/security/llm-security/SKILL.md"
+    },
+    {
+      "skill_id": "security/skills-router",
+      "name": "skills-router",
+      "description": "Task \u2192 skill routing for reverse-skill domains.",
+      "container": "security",
+      "dir": "/Users/lordwilson/.hermes/skills/security/skills-router",
+      "skill_md": "/Users/lordwilson/.hermes/skills/security/skills-router/SKILL.md"
+    },
+    {
+      "skill_id": "skill-orchestration/skill-activation",
+      "name": "skill-activation",
+      "description": "Promote optional skills to active status and verify.",
+      "container": "skill-orchestration",
+      "dir": "/Users/lordwilson/.hermes/skills/skill-orchestration/skill-activation",
+      "skill_md": "/Users/lordwilson/.hermes/skills/skill-orchestration/skill-activation/SKILL.md"
+    },
+    {
+      "skill_id": "skill-orchestration-os",
+      "name": "skill-orchestration-os",
+      "description": "Use when the user asks to chain, orchestrate, route, or build an OS from Hermes skills. Turns Hermes skills into a sovereign cognitive runtime with capability contracts, fault isolation, audit trails, and DeepSeek-based planning.",
+      "container": "skill-orchestration-os",
+      "dir": "/Users/lordwilson/.hermes/skills/skill-orchestration-os",
+      "skill_md": "/Users/lordwilson/.hermes/skills/skill-orchestration-os/SKILL.md"
+    },
+    {
+      "skill_id": "smart-home/openhue",
+      "name": "openhue",
+      "description": "Control Philips Hue lights, scenes, rooms via OpenHue CLI.",
+      "container": "smart-home",
+      "dir": "/Users/lordwilson/.hermes/skills/smart-home/openhue",
+      "skill_md": "/Users/lordwilson/.hermes/skills/smart-home/openhue/SKILL.md"
+    },
+    {
+      "skill_id": "social-media/xurl",
+      "name": "xurl",
+      "description": "X/Twitter via xurl CLI: raw post search, posting, DM, media.",
+      "container": "social-media",
+      "dir": "/Users/lordwilson/.hermes/skills/social-media/xurl",
+      "skill_md": "/Users/lordwilson/.hermes/skills/social-media/xurl/SKILL.md"
+    },
+    {
+      "skill_id": "software-architecture/agent-command-guard",
+      "name": "agent-command-guard",
+      "description": "Portable dangerous-command guard and hook wiring.",
+      "container": "software-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/software-architecture/agent-command-guard",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-architecture/agent-command-guard/SKILL.md"
+    },
+    {
+      "skill_id": "software-architecture/axiom-reverse-engineering",
+      "name": "axiom-reverse-engineering",
+      "description": ">",
+      "container": "software-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/software-architecture/axiom-reverse-engineering",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-architecture/axiom-reverse-engineering/SKILL.md"
+    },
+    {
+      "skill_id": "software-architecture/harness-engineering-blueprint",
+      "name": "harness-engineering-blueprint",
+      "description": "Framework for building intent-driven, multi-agent engineering harnesses with verification mesh, architecture memory, and continuous evolution.",
+      "container": "software-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/software-architecture/harness-engineering-blueprint",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-architecture/harness-engineering-blueprint/SKILL.md"
+    },
+    {
+      "skill_id": "software-architecture/layered-platform-integration",
+      "name": "layered-platform-integration",
+      "description": "Adapter-first multi-repo integration pattern.",
+      "container": "software-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/software-architecture/layered-platform-integration",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-architecture/layered-platform-integration/SKILL.md"
+    },
+    {
+      "skill_id": "software-architecture/local-first-ai-service-patterns",
+      "name": "local-first-ai-service-patterns",
+      "description": "Use when building local-first FastAPI AI services.",
+      "container": "software-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/software-architecture/local-first-ai-service-patterns",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-architecture/local-first-ai-service-patterns/SKILL.md"
+    },
+    {
+      "skill_id": "software-architecture/moie-os-error-guardian",
+      "name": "moie-os-error-guardian",
+      "description": "MoIE-OS Error Guardian v2.0 blueprint: failure containment, failure memory, MoIE inversion reasoning, simulation recovery, Ouroboros self-evolution, event sourcing, trust/permission model, Apple Silicon sovereign deployment, validation framework.",
+      "container": "software-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/software-architecture/moie-os-error-guardian",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-architecture/moie-os-error-guardian/SKILL.md"
+    },
+    {
+      "skill_id": "software-architecture/msb-v2-engineering-sop",
+      "name": "msb-v2-engineering-sop",
+      "description": "Surgical engineering protocol for MSB-v2 / Sovereign Stack refactoring cycles: baseline capture, failure taxonomy, golden tests, decomposition rules, verification gates, architecture integrity checks, deployment gates, evolution cycles, incident response.",
+      "container": "software-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/software-architecture/msb-v2-engineering-sop",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-architecture/msb-v2-engineering-sop/SKILL.md"
+    },
+    {
+      "skill_id": "software-architecture/msb-v2-mesh-evolution-integration",
+      "name": "msb-v2-mesh-evolution-integration",
+      "description": ">",
+      "container": "software-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/software-architecture/msb-v2-mesh-evolution-integration",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-architecture/msb-v2-mesh-evolution-integration/SKILL.md"
+    },
+    {
+      "skill_id": "software-architecture/project-omega-recursive-systems-engineering",
+      "name": "project-omega-recursive-systems-engineering",
+      "description": "Recursive systems engineering protocol: reverse engineering, first principles, missing systems, multi-architecture design, predictive engineering, axiom inversion, multi-agent review, planning, knowledge graph, digital twin, testing, audit, deployment, learning, and final validation.",
+      "container": "software-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/software-architecture/project-omega-recursive-systems-engineering",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-architecture/project-omega-recursive-systems-engineering/SKILL.md"
+    },
+    {
+      "skill_id": "software-architecture/reverse-engineering-axiom-inversion-harness",
+      "name": "reverse-engineering-axiom-inversion-harness",
+      "description": "Evidence-driven cognitive framework for understanding, reconstructing, and modernizing complex systems through reverse engineering and axiom inversion.",
+      "container": "software-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/software-architecture/reverse-engineering-axiom-inversion-harness",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-architecture/reverse-engineering-axiom-inversion-harness/SKILL.md"
+    },
+    {
+      "skill_id": "software-architecture/sovereign-runtime-dev",
+      "name": "sovereign-runtime-dev",
+      "description": "Use when developing sovereign_runtime src/ packages.",
+      "container": "software-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/software-architecture/sovereign-runtime-dev",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-architecture/sovereign-runtime-dev/SKILL.md"
+    },
+    {
+      "skill_id": "software-architecture/universal-blueprint-generator",
+      "name": "universal-blueprint-generator",
+      "description": "Blueprint compiler: intent -> verified architecture.",
+      "container": "software-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/software-architecture/universal-blueprint-generator",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-architecture/universal-blueprint-generator/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/agent-easy-bootstrap",
+      "name": "agent-easy-bootstrap",
+      "description": "Bootstrap agent-easy with Hermes-safe local venv isolation.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/agent-easy-bootstrap",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/agent-easy-bootstrap/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/agent-framework-scaffold-step2",
+      "name": "agent-framework-scaffold-step2",
+      "description": "Add stub imports for agent-framework scaffold mapping without breaking existing imports. Use when creating re-export stubs under root-level scaffold directories.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/agent-framework-scaffold-step2",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/agent-framework-scaffold-step2/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/architectural-scaffolding",
+      "name": "architectural-scaffolding",
+      "description": "Implement published architecture blueprints, specs, or papers as executable project scaffolds across runtimes and languages. Use when the user provides a detailed architectural document and expects concrete working code, file structure, and verification\u2014not just analysis or planning.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/architectural-scaffolding",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/architectural-scaffolding/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/aura-protocol",
+      "name": "aura-protocol",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/aura-protocol",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/aura-protocol/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/browser-persistence-pattern",
+      "name": "browser-persistence-pattern",
+      "description": "Maintain session state across browser tool runs.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/browser-persistence-pattern",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/browser-persistence-pattern/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/cognitive-service-shipping",
+      "name": "cognitive-service-shipping",
+      "description": "... OR native SwiftUI macOS app generated via xcodegen + xcodebuild verification wired to the same backend.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/cognitive-service-shipping",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/cognitive-service-shipping/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/communication-protocol-builder",
+      "name": "communication-protocol-builder",
+      "description": "Generate and validate communication contracts for Hermes skills: schemas, events, memory objects, error codes, retry policies. Use when standardizing skill I/O or building the compiler pipeline. (software-development)",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/communication-protocol-builder",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/communication-protocol-builder/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/controlled-adaptation-loop",
+      "name": "controlled-adaptation-loop",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/controlled-adaptation-loop",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/controlled-adaptation-loop/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/cron-workflow-orchestrator",
+      "name": "cron-workflow-orchestrator",
+      "description": "Orchestrate cron/monitor/recover workflows with Hermes.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/cron-workflow-orchestrator",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/cron-workflow-orchestrator/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/dogfood",
+      "name": "dogfood",
+      "description": "Exploratory QA of web apps: find bugs, evidence, reports.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/dogfood",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/dogfood/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/event-sourced-audit-engine",
+      "name": "event-sourced-audit-engine",
+      "description": ">-",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/event-sourced-audit-engine",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/event-sourced-audit-engine/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/fastapi-app-factory-hardening",
+      "name": "fastapi-app-factory-hardening",
+      "description": ">-",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/fastapi-app-factory-hardening",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/fastapi-app-factory-hardening/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/fastapi-event-sourcing",
+      "name": "fastapi-event-sourcing",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/fastapi-event-sourcing",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/fastapi-event-sourcing/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/hermes-agent-skill-authoring",
+      "name": "hermes-agent-skill-authoring",
+      "description": "Author in-repo SKILL.md files: frontmatter and structure.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/hermes-agent-skill-authoring",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/hermes-agent-skill-authoring/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/hermes-claude-code-handoff",
+      "name": "hermes-claude-code-handoff",
+      "description": "Hermes\u2194Claude Code handoff via shared filesystem artifacts.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/hermes-claude-code-handoff",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/hermes-claude-code-handoff/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/hermes-skill-debugging",
+      "name": "hermes-skill-debugging",
+      "description": "Debug Hermes skill test failures and package skills.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/hermes-skill-debugging",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/hermes-skill-debugging/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/host-runtime-isolation",
+      "name": "host-runtime-isolation",
+      "description": "Isolation patterns and verification fixes for local-first Python projects running alongside Hermes Agent or other tooling that inject PYTHONPATH. Use when new venv imports fail with pydantic_core/_pydantic_core errors, editable-install paths disagree, route-order issues hit /crawl/jobs vs /crawl/{jo",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/host-runtime-isolation",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/host-runtime-isolation/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/inspecting-hermes-desktop-dom",
+      "name": "inspecting-hermes-desktop-dom",
+      "description": "Read the live Hermes desktop DOM/CSS over CDP.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/inspecting-hermes-desktop-dom",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/inspecting-hermes-desktop-dom/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/knowledge-acquisition-engine",
+      "name": "knowledge-acquisition-engine",
+      "description": "Research any profession automatically and build a complete knowledge base: industry overview, regulations, SOPs, expert heuristics, common failures, software ecosystem, APIs, and automation opportunities. Use as Prompt 7 of the Profession-to-Agent Compiler. (software-development)",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/knowledge-acquisition-engine",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/knowledge-acquisition-engine/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/langgraph-integration",
+      "name": "langgraph-integration",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/langgraph-integration",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/langgraph-integration/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/local-model-sovereignty-wiring",
+      "name": "local-model-sovereignty-wiring",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/local-model-sovereignty-wiring",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/local-model-sovereignty-wiring/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/local-python-runtime-patterns",
+      "name": "local-python-runtime-patterns",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/local-python-runtime-patterns",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/local-python-runtime-patterns/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/local-python-service-hardening",
+      "name": "local-python-service-hardening",
+      "description": ">-",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/local-python-service-hardening",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/local-python-service-hardening/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/local-stack-routing-patterns",
+      "name": "local-stack-routing-patterns",
+      "description": "Validate local services and build no-agent cron fallbacks.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/local-stack-routing-patterns",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/local-stack-routing-patterns/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/local-workflow-orchestration",
+      "name": "local-workflow-orchestration",
+      "description": "Orchestrate Hermes cron, n8n, webhooks, and background jobs.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/local-workflow-orchestration",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/local-workflow-orchestration/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/long-horizon-autonomous-research",
+      "name": "long-horizon-autonomous-research",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/long-horizon-autonomous-research",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/long-horizon-autonomous-research/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/macos-local-service-debug",
+      "name": "macos-local-service-debug",
+      "description": "Discover and verify local services on macOS.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/macos-local-service-debug",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/macos-local-service-debug/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/macos-observability-stack",
+      "name": "macos-observability-stack",
+      "description": "Run and verify a local observability stack on macOS without Docker: FastAPI service -> Prometheus exporter -> Prometheus -> Grafana. Use when the user asks to connect the stack, wire metrics to Grafana, boot MSB and Grafana, native binaries observability, verify metrics flowing, Grafana provisioning",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/macos-observability-stack",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/macos-observability-stack/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/mcp-expansion-checklist",
+      "name": "mcp-expansion-checklist",
+      "description": "Inspect and expand local MCP tool registrations.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/mcp-expansion-checklist",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/mcp-expansion-checklist/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/mcp-integration",
+      "name": "mcp-integration",
+      "description": "|",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/mcp-integration",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/mcp-integration/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/memory-architecture-implementation",
+      "name": "memory-architecture-implementation",
+      "description": "Add runtime memory architecture and SVK posture endpoints to MSB v2 style sovereign stacks",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/memory-architecture-implementation",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/memory-architecture-implementation/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/memory-expansion-pattern",
+      "name": "memory-expansion-pattern",
+      "description": "Structure and compact persistent memory entries.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/memory-expansion-pattern",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/memory-expansion-pattern/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/msb-v2-api-workflow",
+      "name": "msb-v2-api-workflow",
+      "description": ">-",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-api-workflow",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-api-workflow/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/msb-v2-continuity-engineering",
+      "name": "msb-v2-continuity-engineering",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-continuity-engineering",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-continuity-engineering/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/msb-v2-contract-validation",
+      "name": "msb-v2-contract-validation",
+      "description": ">-",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-contract-validation",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-contract-validation/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/msb-v2-development-workflow",
+      "name": "msb-v2-development-workflow",
+      "description": ">-",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-development-workflow",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-development-workflow/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/msb-v2-hotspot-refactoring",
+      "name": "msb-v2-hotspot-refactoring",
+      "description": ">-",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-hotspot-refactoring",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-hotspot-refactoring/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/msb-v2-orca-adapter",
+      "name": "msb-v2-orca-adapter",
+      "description": ">-",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-orca-adapter",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-orca-adapter/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/msb-v2-phase-scaffolding",
+      "name": "msb-v2-phase-scaffolding",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-phase-scaffolding",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-phase-scaffolding/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/msb-v2-route-hygiene",
+      "name": "msb-v2-route-hygiene",
+      "description": ">-",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-route-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-route-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/msb-v2-route-hygiene/msb_v2-route-hygiene",
+      "name": "msb-v2-route-hygiene",
+      "description": ">-",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-route-hygiene/msb_v2-route-hygiene",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-route-hygiene/msb_v2-route-hygiene/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/msb-v2-router-registration",
+      "name": "msb-v2-router-registration",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-router-registration",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/msb-v2-router-registration/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/msb-v3-backend-wiring",
+      "name": "msb-v3-backend-wiring",
+      "description": "Patterns for extending msb-v3 with new routers, tenant isolation, and provider wiring. Covers route registration, tenant-scoped session/memory, testing, and service lifecycle on macOS. Use when adding routes, routers, tenant isolation, or provider integrations to msb-v3.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/msb-v3-backend-wiring",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/msb-v3-backend-wiring/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/multi-backend-llm-clients",
+      "name": "multi-backend-llm-clients",
+      "description": "Use when wiring one stdlib LLM client via env vars.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/multi-backend-llm-clients",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/multi-backend-llm-clients/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/n8n-compiled-js-patching",
+      "name": "n8n-compiled-js-patching",
+      "description": "Patch n8n compiled JS when REST endpoints are broken.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/n8n-compiled-js-patching",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/n8n-compiled-js-patching/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/n8n-workflow-debugging",
+      "name": "n8n-workflow-debugging",
+      "description": "Debug n8n workflow REST API errors in self-hosted instances.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/n8n-workflow-debugging",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/n8n-workflow-debugging/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/node-inspect-debugger",
+      "name": "node-inspect-debugger",
+      "description": "Debug Node.js via --inspect + Chrome DevTools Protocol CLI.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/node-inspect-debugger",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/node-inspect-debugger/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/omniproject-cli-router",
+      "name": "omniproject-cli-router",
+      "description": "Expose internal APIs and paths as agent-callable shortcuts.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/omniproject-cli-router",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/omniproject-cli-router/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/omniproject-filesystem-access",
+      "name": "omniproject-filesystem-access",
+      "description": "Manage filesystem access expansion for the workspace.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/omniproject-filesystem-access",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/omniproject-filesystem-access/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/outbound-network-allowlist",
+      "name": "outbound-network-allowlist",
+      "description": "Audit and document safe outbound fetcher paths.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/outbound-network-allowlist",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/outbound-network-allowlist/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/plan",
+      "name": "plan",
+      "description": "Write a markdown plan to .hermes/plans/; no execution.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/plan",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/plan/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/plan-driven-workflow",
+      "name": "plan-driven-workflow",
+      "description": "Use for lords-thoughts autonomous markdown plan runners.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/plan-driven-workflow",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/plan-driven-workflow/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/platform-bootstrap",
+      "name": "platform-bootstrap",
+      "description": "Bootstrap a sovereign Python platform from zero - package scaffold, FastAPI app factory with lazy imports, TestClient smoke, pytest green, live server verification. Designed for crash recovery and partial rebuilds.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/platform-bootstrap",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/platform-bootstrap/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/power-up-deliverable-builder",
+      "name": "power-up-deliverable-builder",
+      "description": "Build the reverse-engineered skill deliverables.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/power-up-deliverable-builder",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/power-up-deliverable-builder/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/power-up-operations",
+      "name": "power-up-operations",
+      "description": "Run the repeatable power-up lifecycle and repair blockers.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/power-up-operations",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/power-up-operations/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/power-up-operator-guardrails",
+      "name": "power-up-operator-guardrails",
+      "description": "Guardrails for running power-up skills safely.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/power-up-operator-guardrails",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/power-up-operator-guardrails/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/power-up-project-reverse-engineering",
+      "name": "power-up-project-reverse-engineering",
+      "description": "Reverse engineer project state and capability gaps.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/power-up-project-reverse-engineering",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/power-up-project-reverse-engineering/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/power-up-qc-agent",
+      "name": "power-up-qc-agent",
+      "description": "QC gate for new skills: validate and smoke test.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/power-up-qc-agent",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/power-up-qc-agent/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/profession-to-agent-compiler",
+      "name": "profession-to-agent-compiler",
+      "description": "Run the compiler pipeline from research to vault write.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/profession-to-agent-compiler",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/profession-to-agent-compiler/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/python-debugpy",
+      "name": "python-debugpy",
+      "description": "Debug Python: pdb REPL + debugpy remote (DAP).",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/python-debugpy",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/python-debugpy/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/python-src-package-scaffold",
+      "name": "python-src-package-scaffold",
+      "description": "Scaffold Python packages under src/ with tests.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/python-src-package-scaffold",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/python-src-package-scaffold/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/python-test-bootstrap",
+      "name": "python-test-bootstrap",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/python-test-bootstrap",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/python-test-bootstrap/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/ralph-loop-harness",
+      "name": "ralph-loop-harness",
+      "description": "Deterministic agent loop. Use for Ralph Loop or STATUS.json.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/ralph-loop-harness",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/ralph-loop-harness/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/recursive-systems-architect",
+      "name": "recursive-systems-architect",
+      "description": "Recursive architecture design with axiom inversion and field effects. Use when inverting core assumptions, redesigning control flow, building emergent multi-agent systems, inverting external architecture proposals into executable local stacks, or applying memory-forgetting/pattern-survival patterns.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/recursive-systems-architect",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/recursive-systems-architect/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/repository-deep-archaeology",
+      "name": "repository-deep-archaeology",
+      "description": "Run a structured Level 10 systems architecture analysis on a local repository. Produces evidence-based phased report with anomaly detection and roadmap. Designed for long-running background execution.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/repository-deep-archaeology",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/repository-deep-archaeology/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/requesting-code-review",
+      "name": "requesting-code-review",
+      "description": "Pre-commit review: security scan, quality gates, auto-fix.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/requesting-code-review",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/requesting-code-review/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/research-artifact-registry",
+      "name": "research-artifact-registry",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/research-artifact-registry",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/research-artifact-registry/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/research-prototype-to-service",
+      "name": "research-prototype-to-service",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/research-prototype-to-service",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/research-prototype-to-service/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/simplify-code",
+      "name": "simplify-code",
+      "description": "Parallel 4-agent cleanup of recent code changes.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/simplify-code",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/simplify-code/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/skill-pipeline-shortcut",
+      "name": "skill-pipeline-shortcut",
+      "description": "Scaffold, patch, and verify Hermes skills from templates.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/skill-pipeline-shortcut",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/skill-pipeline-shortcut/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/smi-lifecycle-freezing",
+      "name": "smi-lifecycle-freezing",
+      "description": "Freeze SMI milestones: artifacts, tests, and audit.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/smi-lifecycle-freezing",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/smi-lifecycle-freezing/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/sovereign-audit-stack",
+      "name": "sovereign-audit-stack",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/sovereign-audit-stack",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/sovereign-audit-stack/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/sovereign-git-operator",
+      "name": "sovereign-git-operator",
+      "description": "Enable safe write-side git operations from agent context.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/sovereign-git-operator",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/sovereign-git-operator/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/sovereign-intelligence-core",
+      "name": "sovereign-intelligence-core",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/sovereign-intelligence-core",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/sovereign-intelligence-core/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/sovereign-knowledge-graph",
+      "name": "sovereign-knowledge-graph",
+      "description": "Record sovereign stack entities in the knowledge graph.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/sovereign-knowledge-graph",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/sovereign-knowledge-graph/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/sovereign-pipeline-hardening",
+      "name": "sovereign-pipeline-hardening",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/sovereign-pipeline-hardening",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/sovereign-pipeline-hardening/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/sovereign-provider-hardening",
+      "name": "sovereign-provider-hardening",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/sovereign-provider-hardening",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/sovereign-provider-hardening/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/spec-first-coding-missions",
+      "name": "spec-first-coding-missions",
+      "description": "Implement bounded missions from frozen specs.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/spec-first-coding-missions",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/spec-first-coding-missions/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/spike",
+      "name": "spike",
+      "description": "Throwaway experiments to validate an idea before build.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/spike",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/spike/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/structured-artifact-verification",
+      "name": "structured-artifact-verification",
+      "description": "Parser checks for edited files; clean temp scripts after.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/structured-artifact-verification",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/structured-artifact-verification/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/structured-concurrency",
+      "name": "structured-concurrency",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/structured-concurrency",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/structured-concurrency/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/systematic-debugging",
+      "name": "systematic-debugging",
+      "description": "4-phase root cause debugging: understand bugs before fixing.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/systematic-debugging",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/systematic-debugging/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/test-driven-development",
+      "name": "test-driven-development",
+      "description": "TDD: enforce RED-GREEN-REFACTOR, tests before code.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/test-driven-development",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/test-driven-development/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/triumvirate-api-patterns",
+      "name": "triumvirate-api-patterns",
+      "description": "Triumvirate OS API patterns for msb-v3.",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/triumvirate-api-patterns",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/triumvirate-api-patterns/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/typescript-monorepo-workflow",
+      "name": "typescript-monorepo-workflow",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/typescript-monorepo-workflow",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/typescript-monorepo-workflow/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/typescript-motia-step-development",
+      "name": "typescript-motia-step-development",
+      "description": ">",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/typescript-motia-step-development",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/typescript-motia-step-development/SKILL.md"
+    },
+    {
+      "skill_id": "software-development/universal-skill-builder",
+      "name": "universal-skill-builder",
+      "description": "Build a Hermes skill from any Obsidian vault folder. Inspect schema, confirm, generate runnable skill + script. Use when creating domain-specific matchers, wiki search, or entity automation from vault data. (software-development)",
+      "container": "software-development",
+      "dir": "/Users/lordwilson/.hermes/skills/software-development/universal-skill-builder",
+      "skill_md": "/Users/lordwilson/.hermes/skills/software-development/universal-skill-builder/SKILL.md"
+    },
+    {
+      "skill_id": "sovereign-architecture",
+      "name": "sovereign-architecture",
+      "description": "Sovereign/thermodynamic AI architecture: hardware-anchored identity, axiom inversion, VY-NEXUS/MoIE-OS, Genesis Block, T=0 alignment, VDR, and local-first safety-critical systems. Use when the user references Sovereign Stack, Guardian Protocol, VY-NEXUS, thermodynamic AI safety, Vesta-Zero, Genesis ",
+      "container": "sovereign-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/sovereign-architecture",
+      "skill_md": "/Users/lordwilson/.hermes/skills/sovereign-architecture/SKILL.md"
+    },
+    {
+      "skill_id": "sovereign-architecture/commercial-intelligence-loop",
+      "name": "commercial-intelligence-loop",
+      "description": "Commercial BI service over sovereign reasoning primitives.",
+      "container": "sovereign-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/sovereign-architecture/commercial-intelligence-loop",
+      "skill_md": "/Users/lordwilson/.hermes/skills/sovereign-architecture/commercial-intelligence-loop/SKILL.md"
+    },
+    {
+      "skill_id": "sovereign-architecture/kind-compassionate-ai",
+      "name": "kind-compassionate-ai",
+      "description": ">",
+      "container": "sovereign-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/sovereign-architecture/kind-compassionate-ai",
+      "skill_md": "/Users/lordwilson/.hermes/skills/sovereign-architecture/kind-compassionate-ai/SKILL.md"
+    },
+    {
+      "skill_id": "sovereign-architecture/msb-v2-constitution",
+      "name": "msb-v2-constitution",
+      "description": ">",
+      "container": "sovereign-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/sovereign-architecture/msb-v2-constitution",
+      "skill_md": "/Users/lordwilson/.hermes/skills/sovereign-architecture/msb-v2-constitution/SKILL.md"
+    },
+    {
+      "skill_id": "sovereign-architecture/msb-v2-incremental-build",
+      "name": "msb-v2-incremental-build",
+      "description": "Incremental MSB v2 implementation pattern: phase-by-phase build, router mounting, targeted pytest workflow, and live smoke checks.",
+      "container": "sovereign-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/sovereign-architecture/msb-v2-incremental-build",
+      "skill_md": "/Users/lordwilson/.hermes/skills/sovereign-architecture/msb-v2-incremental-build/SKILL.md"
+    },
+    {
+      "skill_id": "sovereign-architecture/sovereign-investor-playbook",
+      "name": "sovereign-investor-playbook",
+      "description": ">",
+      "container": "sovereign-architecture",
+      "dir": "/Users/lordwilson/.hermes/skills/sovereign-architecture/sovereign-investor-playbook",
+      "skill_md": "/Users/lordwilson/.hermes/skills/sovereign-architecture/sovereign-investor-playbook/SKILL.md"
+    },
+    {
+      "skill_id": "sovereign-mcp-intelligence-gateway",
+      "name": "sovereign-mcp-intelligence-gateway",
+      "description": "SMIG: MCP Gateway + Sovereign Stack / MoIE / AIL blueprint.",
+      "container": "sovereign-mcp-intelligence-gateway",
+      "dir": "/Users/lordwilson/.hermes/skills/sovereign-mcp-intelligence-gateway",
+      "skill_md": "/Users/lordwilson/.hermes/skills/sovereign-mcp-intelligence-gateway/SKILL.md"
+    },
+    {
+      "skill_id": "sovereign-prompt-architect",
+      "name": "sovereign-prompt-architect",
+      "description": "Generate a single optimized prompt for architecture/system-design questions.",
+      "container": "sovereign-prompt-architect",
+      "dir": "/Users/lordwilson/.hermes/skills/sovereign-prompt-architect",
+      "skill_md": "/Users/lordwilson/.hermes/skills/sovereign-prompt-architect/SKILL.md"
+    },
+    {
+      "skill_id": "sovereignty/sovereign-agi-harness",
+      "name": "sovereign-agi-harness",
+      "description": ">",
+      "container": "sovereignty",
+      "dir": "/Users/lordwilson/.hermes/skills/sovereignty/sovereign-agi-harness",
+      "skill_md": "/Users/lordwilson/.hermes/skills/sovereignty/sovereign-agi-harness/SKILL.md"
+    },
+    {
+      "skill_id": "srse-deliverables",
+      "name": "srse-deliverables",
+      "description": "Package a finished SRSE research report into a client-ready deliverable. Use when asked to package, reformat, or prepare an SRSE run for a client or prospect. Inputs: a run slug (folder under ~/Documents/Vault/20_Research/), a client/prospect name, and a deliverable type (competitive-analysis, exec-",
+      "container": "srse-deliverables",
+      "dir": "/Users/lordwilson/.hermes/skills/srse-deliverables",
+      "skill_md": "/Users/lordwilson/.hermes/skills/srse-deliverables/SKILL.md"
+    },
+    {
+      "skill_id": "strategy/ai-adoption-maturity",
+      "name": "ai-adoption-maturity",
+      "description": "Five-step maturity ladder for AI-assisted organizations: Gated \u2192 Assisted \u2192 Parallel \u2192 Supervised autonomy \u2192 AI-native. Use to assess current state, identify bottlenecks, and plan the next upgrade.",
+      "container": "strategy",
+      "dir": "/Users/lordwilson/.hermes/skills/strategy/ai-adoption-maturity",
+      "skill_md": "/Users/lordwilson/.hermes/skills/strategy/ai-adoption-maturity/SKILL.md"
+    },
+    {
+      "skill_id": "strategy/ai-adoption-step2-implementation",
+      "name": "ai-adoption-step2-implementation",
+      "description": "Concrete runbook to upgrade an AI-assisted workflow to Step 2 (Parallel): trust gates, worktree isolation, auto-mode, reviewer agents, and verification targets. Tailored for MSB v2 but generic enough for any repo.",
+      "container": "strategy",
+      "dir": "/Users/lordwilson/.hermes/skills/strategy/ai-adoption-step2-implementation",
+      "skill_md": "/Users/lordwilson/.hermes/skills/strategy/ai-adoption-step2-implementation/SKILL.md"
+    },
+    {
+      "skill_id": "strategy/sovereign-predator",
+      "name": "sovereign-predator",
+      "description": ">",
+      "container": "strategy",
+      "dir": "/Users/lordwilson/.hermes/skills/strategy/sovereign-predator",
+      "skill_md": "/Users/lordwilson/.hermes/skills/strategy/sovereign-predator/SKILL.md"
+    },
+    {
+      "skill_id": "testing/env-var-test-isolation",
+      "name": "env-var-test-isolation",
+      "description": ">",
+      "container": "testing",
+      "dir": "/Users/lordwilson/.hermes/skills/testing/env-var-test-isolation",
+      "skill_md": "/Users/lordwilson/.hermes/skills/testing/env-var-test-isolation/SKILL.md"
+    },
+    {
+      "skill_id": "testing/evaluation-harness-scaffold",
+      "name": "evaluation-harness-scaffold",
+      "description": "Use when deps block benchmark work. Scaffold offline first. Also covers SMI-011 retrieval integration: benchmark dataset -> router -> embedding backend -> vector search -> ranked results -> evaluator -> benchmark report, with failure analysis.",
+      "container": "testing",
+      "dir": "/Users/lordwilson/.hermes/skills/testing/evaluation-harness-scaffold",
+      "skill_md": "/Users/lordwilson/.hermes/skills/testing/evaluation-harness-scaffold/SKILL.md"
+    },
+    {
+      "skill_id": "testing/prototype-hardening",
+      "name": "prototype-hardening",
+      "description": "Harden an existing prototype into tested, auditable code.",
+      "container": "testing",
+      "dir": "/Users/lordwilson/.hermes/skills/testing/prototype-hardening",
+      "skill_md": "/Users/lordwilson/.hermes/skills/testing/prototype-hardening/SKILL.md"
+    },
+    {
+      "skill_id": "vault-reuse-audit",
+      "name": "vault-reuse-audit",
+      "description": "Reuse existing vault artifacts before creating duplicates.",
+      "container": "vault-reuse-audit",
+      "dir": "/Users/lordwilson/.hermes/skills/vault-reuse-audit",
+      "skill_md": "/Users/lordwilson/.hermes/skills/vault-reuse-audit/SKILL.md"
+    },
+    {
+      "skill_id": "vault-search",
+      "name": "vault-search",
+      "description": "Real semantic search over Wilson's Obsidian vault (~/Documents/Vault) via msb-v3's Qdrant-backed retrieval endpoints. Finds conceptually related notes even when they share no literal keywords with the query -- unlike msb-v3's own search_query/search_simple tools (via msb_mcp_server), which are naive",
+      "container": "vault-search",
+      "dir": "/Users/lordwilson/.hermes/skills/vault-search",
+      "skill_md": "/Users/lordwilson/.hermes/skills/vault-search/SKILL.md"
+    },
+    {
+      "skill_id": "yuanbao",
+      "name": "yuanbao",
+      "description": "Yuanbao (\u5143\u5b9d) groups: @mention users, query info/members.",
+      "container": "yuanbao",
+      "dir": "/Users/lordwilson/.hermes/skills/yuanbao",
+      "skill_md": "/Users/lordwilson/.hermes/skills/yuanbao/SKILL.md"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "experiments": {
+    "d01_registry_integrity": {
+      "skill": "registry-hygiene",
+      "runner": "d01_registry_integrity_runner.py"
+    },
+    "d02_test_suite": {
+      "skill": "regression-hygiene",
+      "runner": "d02_test_suite_runner.py"
+    },
+    "d03_orchestration_smoke": {
+      "skill": "regression-hygiene",
+      "runner": "d03_orchestration_smoke_runner.py"
+    }
+  },
+  "live_auth": false,
+  "pytest_target": "test_router.py",
+  "note": "Pure-CLI tool (no server/daemon), so the factory's live-auth probe is scoped out. The routing table (domains.json) is verified on every rebuild by d01; the 23 unit tests are re-run by d02; the folded front-end's own OS smoke suite (12 tests) is re-run by d03. pytest_target overrides the factory's default 'tests/' because this repo keeps its tests at the root."
+}
