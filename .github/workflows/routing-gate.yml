@@ -16,6 +16,12 @@ name: routing-gate
 # the canonical registry fails replay with "re-run --live" — CI therefore
 # fails loudly (not silently) when the two repos drift out of sync.
 # Replay never calls DeepSeek (zero spend); no API keys are used here.
+#
+# Recovery when d04 goes red after an OS-side change (a guaranteed future
+# event, since the OS repo's own CI never runs d04): locally run
+#   python scripts/hygiene/d04_routing_accuracy_runner.py --live
+# (requires DEEPSEEK_API_KEY; the only spending mode) and commit the
+# re-recorded recorded_responses.jsonl. CI cannot re-record — it has no key.
 
 on:
   push:
@@ -61,4 +67,4 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           python scripts/hygiene/d04_routing_accuracy_runner.py > /tmp/d04.json 2>&1 || { echo 'd04 runner failed:'; tail -20 /tmp/d04.json; exit 1; }
-          python -c 'import json; d=json.load(open("/tmp/d04.json")); print("d04:", d["mode"], "|", d["verdict"], "|", d["actual_behavior"]); assert d["verdict"] == "pass", d["errors"]'
+          python -c 'import json; d=json.load(open("/tmp/d04.json")); print("d04:", d["mode"], "|", d["verdict"], "|", d["actual_behavior"]); assert d["mode"] == "replay" and d["verdict"] == "pass", d["errors"]'
