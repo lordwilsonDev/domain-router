@@ -22,7 +22,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-_ORCH = Path.home() / ".hermes" / "skills" / "skill-orchestration-os"
+_ORCH = Path(os.environ.get("ORCH_OS", str(Path.home() / ".hermes" / "skills" / "skill-orchestration-os")))
 if str(_ORCH) not in sys.path:
     sys.path.insert(0, str(_ORCH))
 

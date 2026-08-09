@@ -28,7 +28,7 @@ import time
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
-ORCH = Path.home() / ".hermes" / "skills" / "skill-orchestration-os"
+ORCH = Path(os.environ.get("ORCH_OS", str(Path.home() / ".hermes" / "skills" / "skill-orchestration-os")))
 PY = sys.executable
 EVIDENCE_DIR = REPO / "artifacts" / "hygiene"
 EVIDENCE_DIR.mkdir(parents=True, exist_ok=True)

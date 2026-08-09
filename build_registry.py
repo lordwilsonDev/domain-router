@@ -20,10 +20,11 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
 import sys
 from pathlib import Path
 
-_ORCH = Path.home() / ".hermes" / "skills" / "skill-orchestration-os"
+_ORCH = Path(os.environ.get("ORCH_OS", str(Path.home() / ".hermes" / "skills" / "skill-orchestration-os")))
 _canonical_path = _ORCH / "build_registry.py"
 
 _spec = importlib.util.spec_from_file_location("orchestration_build_registry", _canonical_path)

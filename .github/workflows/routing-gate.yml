@@ -1,0 +1,64 @@
+name: routing-gate
+
+# Zero-spend routing gate for the domain-router: the 23 unit tests (d02) and
+# the routing-accuracy replay eval (d04, 25 hand-labeled cases, top-1 gated at
+# 0.8) on every push to main, daily (06:30 UTC), and manual dispatch.
+#
+# Both legs forward to the CANONICAL runtime in the private
+# lordwilsonDev/skill-orchestration-os repo, so that sibling is checked out
+# inside the workspace (actions/checkout rejects paths outside
+# GITHUB_WORKSPACE) using the GH_PAT secret. Inert without the secret — the
+# gated steps skip visibly, never silently. Set GH_PAT (a fine-grained PAT
+# with Contents:Read on that repo is least privilege) to enforce.
+#
+# The d04 leg is the standing drift guard: every recorded response carries
+# the sha256 of the prompt it answered, so any description/skill change in
+# the canonical registry fails replay with "re-run --live" — CI therefore
+# fails loudly (not silently) when the two repos drift out of sync.
+# Replay never calls DeepSeek (zero spend); no API keys are used here.
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '30 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    env:
+      ORCH_OS: ${{ github.workspace }}/skill-orchestration-os
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install pytest
+        run: pip install -q pytest
+
+      - name: Checkout skill-orchestration-os (canonical runtime)
+        if: env.GH_PAT != ''
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        uses: actions/checkout@v4
+        with:
+          repository: lordwilsonDev/skill-orchestration-os
+          token: ${{ secrets.GH_PAT }}
+          path: skill-orchestration-os
+
+      - name: d02 unit tests (23)
+        if: env.GH_PAT != ''
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: python -m pytest test_router.py -q
+
+      - name: d04 routing-accuracy replay gate (zero-spend)
+        if: env.GH_PAT != ''
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          python scripts/hygiene/d04_routing_accuracy_runner.py > /tmp/d04.json 2>&1 || { echo 'd04 runner failed:'; tail -20 /tmp/d04.json; exit 1; }
+          python -c 'import json; d=json.load(open("/tmp/d04.json")); print("d04:", d["mode"], "|", d["verdict"], "|", d["actual_behavior"]); assert d["verdict"] == "pass", d["errors"]'
