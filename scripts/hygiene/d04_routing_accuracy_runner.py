@@ -23,6 +23,12 @@ Modes:
       ~/.hermes/.env). Run directly, NOT via hygiene_runner --all (the index
       times out at 300s; a live run is slower).
 
+Canary budget: --live is capped by --max-calls (default 2 x case count = one
+call per case + one retry). When the cap is hit the run stops calling and the
+remaining cases FAIL with "live budget exhausted" — a runaway spend can't
+happen from a fixture that grows or a flaky network that retries forever. The
+artifact records the exact number of live calls made.
+
 Fixture drift is a failure: every expected_skill_id must still exist in the
 current registry, so renaming/removing a skill fails the gate loudly.
 
@@ -114,6 +120,8 @@ def main() -> int:
                         help="call real DeepSeek and re-record responses (the only spending mode)")
     parser.add_argument("--threshold", type=float, default=DEFAULT_THRESHOLD,
                         help=f"minimum top-1 accuracy to pass (default {DEFAULT_THRESHOLD})")
+    parser.add_argument("--max-calls", type=int, default=None,
+                        help="hard cap on live DeepSeek calls (default: 2 x case count)")
     parser.add_argument("--cases", type=Path, default=CASES, help="fixture path")
     parser.add_argument("--recorded", type=Path, default=RECORDED, help="recorded responses path")
     args = parser.parse_args()
@@ -187,6 +195,11 @@ def main() -> int:
 
     per_case = []
     new_recorded: dict[str, str] = {}
+    # Canary budget: a live run may make at most max_calls API calls total
+    # (default 2 per case — one per case plus one retry each). Exhaustion
+    # fails the remaining cases loudly; the artifact records the spend.
+    max_calls = args.max_calls if args.max_calls else 2 * len(cases)
+    calls_made = 0
     for case in cases:
         cid = case["id"]
         task = case["task"]
@@ -197,6 +210,10 @@ def main() -> int:
                 raw = None
                 last_err = None
                 for _attempt in range(2):  # one retry absorbs transient network blips
+                    calls_made += 1
+                    if calls_made > max_calls:
+                        raise ValueError(
+                            f"live budget exhausted after {max_calls} calls (--max-calls)")
                     try:
                         raw = strip_fences(_post_deepseek(prompt, _deepseek_key()))
                         break
@@ -264,10 +281,12 @@ def main() -> int:
         "latency_ms": latency_ms,
         "errors": drift_errors + [p["error"] for p in per_case if p.get("error")],
         "state_before": {"cases": total, "registry_skills": len(by_id), "threshold": args.threshold,
-                          "mode": "live" if live else "replay"},
+                          "mode": "live" if live else "replay",
+                          "max_calls": max_calls if live else None},
         "state_after": {"accuracy": accuracy, "correct": correct, "total": total,
                          "container_accuracy": container_acc, "container_correct": container_ok,
                          "tricky_accuracy": tricky_acc, "passed": passed, "summary": summary,
+                         "live_calls": calls_made if live else None,
                          "per_case": per_case},
         "recovery": "re-run with --live after description/skill changes to re-measure and re-record",
         "false_repair": False,
