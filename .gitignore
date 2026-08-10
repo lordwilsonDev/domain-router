@@ -1,11 +1,3 @@
 __pycache__/
 *.pyc
-.pytest_cache/
-# Per-run experiment artifacts stay untracked; the two GATE evidence files
-# (factory_gate.json + hygiene_aggregate.json) are committed so the strict
-# constellation gate can verify this repo from a CI checkout.
-artifacts/*
-!artifacts/hygiene/
-artifacts/hygiene/*
-!artifacts/hygiene/factory_gate.json
-!artifacts/hygiene/hygiene_aggregate.json
+mutants/
