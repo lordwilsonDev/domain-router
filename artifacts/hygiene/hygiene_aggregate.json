@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-10T15:09:59.146572+00:00",
+  "timestamp": "2026-08-10T15:18:45.063006+00:00",
   "environment": {
     "repo": "/Users/lordwilson/.hermes/domain-router",
     "python": "/opt/homebrew/Caskroom/miniforge/base/bin/python",
@@ -9,7 +9,7 @@
     {
       "experiment": "d03_orchestration_smoke",
       "verdict": "pass",
-      "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d03_orchestration_smoke_20260810T150958Z.json",
+      "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d03_orchestration_smoke_20260810T151843Z.json",
       "returncode": 0
     }
   ],
