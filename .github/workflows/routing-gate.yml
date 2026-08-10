@@ -91,8 +91,10 @@ jobs:
           env | grep -iE 'GIT_|GITHUB_TOKEN|GH_TOKEN' | sed 's/=.*/=<set>/' | head -8
           echo '--- git config all levels (redacted values) ---'
           git config --show-origin --list 2>/dev/null | sed -E 's/(password|token|header) ?= ?.*/\1=<redacted>/I' | grep -iE 'credential|extraheader|url\.|insteadof|http\.' | head -8
-          echo '--- verbose git ls-remote (first auth line only) ---'
-          GIT_CURL_VERBOSE=1 GIT_TERMINAL_PROMPT=0 git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" 2>&1 | grep -iE 'authorization|http/' | head -4
+          echo '--- FIX-A: run probe from outside the workspace (no local extraheader) ---'
+          (cd "$HOME" && git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" 2>&1 | head -2)
+          echo '--- FIX-B: clear extraheader with exact key ---'
+          git -c 'http.https://github.com/.extraheader=' ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" 2>&1 | head -2
 
       - name: Checkout skill-orchestration-os (canonical runtime)
         if: env.GH_PAT != ''
