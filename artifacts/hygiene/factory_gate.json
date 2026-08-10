@@ -1,0 +1,140 @@
+{
+  "PROJECT_MAP": {
+    "project_id": "e83f6156ceaa",
+    "name": "domain-router",
+    "root": "/Users/lordwilson/.hermes/domain-router",
+    "discovered_at": "2026-08-10T07:11:37.806579+00:00"
+  },
+  "BASELINE": {
+    "project": {
+      "project_id": "e83f6156ceaa",
+      "name": "domain-router",
+      "root": "/Users/lordwilson/.hermes/domain-router",
+      "discovered_at": "2026-08-10T07:11:37.806579+00:00"
+    },
+    "tests": "n/a",
+    "git": "n/a",
+    "dependencies": "n/a",
+    "claims": []
+  },
+  "VERIFICATION": {
+    "pytest": {
+      "passed": true,
+      "summary": "23 passed in 0.17s",
+      "duration_s": 1
+    },
+    "coverage": {
+      "configured": false,
+      "source": null,
+      "floor_pct": 0.0,
+      "pct": null,
+      "met": null
+    },
+    "live_auth": {
+      "verified": null,
+      "detail": "scoped out \u2014 project declares live_auth:false in suite.json",
+      "correct_secret": null,
+      "wrong_secret": null,
+      "missing_secret": null
+    },
+    "git_head": "64c02c187c3e7c3d4d7f12df791e8f16d8c38c7c"
+  },
+  "SUITE_CONFIG": {
+    "source": "<project>/scripts/hygiene/suite.json",
+    "experiments": [
+      "d01_registry_integrity",
+      "d02_test_suite",
+      "d03_orchestration_smoke",
+      "d04_routing_accuracy",
+      "d05_vault_freshness",
+      "d06_vault_search_mcp",
+      "d07_structural_classifier"
+    ],
+    "live_auth": false,
+    "pytest_target": "test_router.py"
+  },
+  "EVIDENCE_INDEX": {
+    "claims_verified": 7,
+    "artifacts": [
+      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d01_registry_integrity_20260810T071139Z.json",
+      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d02_test_suite_20260810T071140Z.json",
+      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d03_orchestration_smoke_20260810T071140Z.json",
+      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d04_routing_accuracy_20260810T071140Z.json",
+      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d05_vault_freshness_20260810T071140Z.json",
+      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d06_vault_search_mcp_20260810T071140Z.json",
+      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d07_structural_classifier_20260810T071141Z.json"
+    ],
+    "verified_at": "2026-08-10T07:11:41.030449+00:00",
+    "member_results": [
+      {
+        "experiment": "d01_registry_integrity",
+        "skill": "registry-hygiene",
+        "verdict": "pass",
+        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d01_registry_integrity_20260810T071139Z.json",
+        "violations": []
+      },
+      {
+        "experiment": "d02_test_suite",
+        "skill": "regression-hygiene",
+        "verdict": "pass",
+        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d02_test_suite_20260810T071140Z.json",
+        "violations": []
+      },
+      {
+        "experiment": "d03_orchestration_smoke",
+        "skill": "regression-hygiene",
+        "verdict": "pass",
+        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d03_orchestration_smoke_20260810T071140Z.json",
+        "violations": []
+      },
+      {
+        "experiment": "d04_routing_accuracy",
+        "skill": "regression-hygiene",
+        "verdict": "pass",
+        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d04_routing_accuracy_20260810T071140Z.json",
+        "violations": []
+      },
+      {
+        "experiment": "d05_vault_freshness",
+        "skill": "knowledge-hygiene",
+        "verdict": "pass",
+        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d05_vault_freshness_20260810T071140Z.json",
+        "violations": []
+      },
+      {
+        "experiment": "d06_vault_search_mcp",
+        "skill": "knowledge-hygiene",
+        "verdict": "pass",
+        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d06_vault_search_mcp_20260810T071140Z.json",
+        "violations": []
+      },
+      {
+        "experiment": "d07_structural_classifier",
+        "skill": "hot-loop-safety-audit",
+        "verdict": "pass",
+        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d07_structural_classifier_20260810T071141Z.json",
+        "violations": []
+      }
+    ]
+  },
+  "RELEASE_VERDICT": {
+    "critical_requirements_tested": true,
+    "critical_invariants_verified": false,
+    "critical_failures_resolved": true,
+    "security_boundaries_tested": false,
+    "state_recovery_tested": false,
+    "important_failure_modes_have_experiments": true,
+    "claims_have_evidence": true,
+    "regression_passed": true,
+    "reproducibility_documented": true,
+    "live_auth_verified": false,
+    "unresolved_unknowns_disclosed": true,
+    "release_verdict": "PASS",
+    "unresolved_unknowns": [],
+    "coverage_floor_met": null,
+    "notes": [
+      "live_auth scoped out: project suite.json declares live_auth:false (no server to probe)"
+    ],
+    "artifact_schema_violations": 0
+  }
+}
