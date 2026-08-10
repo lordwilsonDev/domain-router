@@ -57,6 +57,19 @@ jobs:
       - name: Install pytest
         run: pip install -q pytest
 
+      - name: TEMP-DIAG GH_PAT type + probe (remove after diagnosis)
+        if: env.GH_PAT != ''
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          case "$GH_PAT" in
+            ghp_*) echo "GH_PAT type: classic";;
+            github_pat_*) echo "GH_PAT type: fine-grained";;
+            *) echo "GH_PAT type: other (len=${#GH_PAT})";;
+          esac
+          echo '--- vault-tooling probe with visible error ---'
+          git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" 2>&1 | head -3
+
       - name: Checkout skill-orchestration-os (canonical runtime)
         if: env.GH_PAT != ''
         env:
