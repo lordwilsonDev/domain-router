@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-09T21:08:12+00:00",
-  "count": 362,
+  "generated_at": "2026-08-10T01:54:06+00:00",
+  "count": 364,
   "containers": [
     "ai-systems-field-consultant",
     "apple",
@@ -481,6 +481,14 @@
       "container": "business",
       "dir": "/Users/lordwilson/.hermes/skills/business/medical-growth-ops",
       "skill_md": "/Users/lordwilson/.hermes/skills/business/medical-growth-ops/SKILL.md"
+    },
+    {
+      "skill_id": "business/meeting-prep-dashboard",
+      "name": "antigravity",
+      "description": "Generate a complete Automated Meeting Prep Dashboard: take a company name/domain/meeting context and build a local glassmorphic HTML dashboard full of deep-researched NotebookLM artifacts (executive briefing, competitive intel, deep research report, quiz, flashcards, market infographic, audio briefi",
+      "container": "business",
+      "dir": "/Users/lordwilson/.hermes/skills/business/meeting-prep-dashboard",
+      "skill_md": "/Users/lordwilson/.hermes/skills/business/meeting-prep-dashboard/SKILL.md"
     },
     {
       "skill_id": "business/niche-workflow-generator",
@@ -2865,6 +2873,14 @@
       "container": "sovereignty",
       "dir": "/Users/lordwilson/.hermes/skills/sovereignty/sovereign-agi-harness",
       "skill_md": "/Users/lordwilson/.hermes/skills/sovereignty/sovereign-agi-harness/SKILL.md"
+    },
+    {
+      "skill_id": "sovereignty/sovereign-meta-skill",
+      "name": "sovereign-meta-skill",
+      "description": "Run the Sovereign Meta-Cognitive Dashboard Engine: a Level-10 recursive intelligence pipeline combining Axiom Inversion (MoIE) methodology, GNOP clinical grounding, and NotebookLM's 136-source Oracle Protocol to produce a publication-ready research package with a glassmorphic HTML dashboard. Use thi",
+      "container": "sovereignty",
+      "dir": "/Users/lordwilson/.hermes/skills/sovereignty/sovereign-meta-skill",
+      "skill_md": "/Users/lordwilson/.hermes/skills/sovereignty/sovereign-meta-skill/SKILL.md"
     },
     {
       "skill_id": "srse-deliverables",
