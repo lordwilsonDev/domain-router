@@ -61,21 +61,34 @@ def _now() -> str:
 def _parse(path: Path) -> ast.Module | None:
     try:
         return ast.parse(path.read_text(encoding="utf-8"))
-    except (OSError, SyntaxError):
+    except (OSError, SyntaxError, UnicodeDecodeError):
         return None
 
 
 def _assign_const(tree: ast.Module, name: str):
-    """First top-level assignment constant for `name` (int, str, or tuple of str)."""
-    for node in ast.walk(tree):
+    """First module-level assignment constant for `name` (int, str, tuple of str).
+
+    Scoped to top-level statements only so a future function-local variable
+    with the same name can never shadow the module constant. Fails closed:
+    anything this helper cannot read (computed constants, etc.) yields None,
+    and the parity check then fails loudly rather than silently passing.
+    """
+    for node in tree.body:
+        targets: list[ast.expr] = []
+        value: ast.expr | None = None
         if isinstance(node, ast.Assign):
-            for t in node.targets:
-                if isinstance(t, ast.Name) and t.id == name:
-                    v = node.value
-                    if isinstance(v, ast.Constant):
-                        return v.value
-                    if isinstance(v, (ast.Tuple, ast.List)):
-                        return tuple(e.value for e in v.elts if isinstance(e, ast.Constant))
+            targets = node.targets
+            value = node.value
+        elif isinstance(node, ast.AnnAssign) and node.value is not None:
+            targets = [node.target]
+            value = node.value
+        for t in targets:
+            if isinstance(t, ast.Name) and t.id == name:
+                v = value
+                if isinstance(v, ast.Constant):
+                    return v.value
+                if isinstance(v, (ast.Tuple, ast.List)):
+                    return tuple(e.value for e in v.elts if isinstance(e, ast.Constant))
     return None
 
 
@@ -130,12 +143,22 @@ def main() -> int:
 
     checks: list[tuple[str, bool, str]] = []
 
-    ok = mtools == stools == EXPECTED_TOOLS
-    checks.append((
-        "manifest matches server tool surface",
-        ok,
-        f"manifest={sorted(mtools)} server={sorted(stools)} expected={sorted(EXPECTED_TOOLS)}",
-    ))
+    if mtools == stools and mtools != EXPECTED_TOOLS:
+        # A new tool added to BOTH server and manifest -- the gate must still
+        # fail (green means green) but the message must say why, since the two
+        # lists visibly agree.
+        checks.append((
+            "manifest matches server tool surface",
+            False,
+            f"new tool(s) added to both: {sorted(mtools - EXPECTED_TOOLS)} "
+            f"-- update EXPECTED_TOOLS in this runner to bless the addition",
+        ))
+    else:
+        checks.append((
+            "manifest matches server tool surface",
+            mtools == stools == EXPECTED_TOOLS,
+            f"manifest={sorted(mtools)} server={sorted(stools)} expected={sorted(EXPECTED_TOOLS)}",
+        ))
 
     schema_ok = all(
         isinstance(t.get("inputSchema"), dict) and t.get("description")
@@ -168,7 +191,10 @@ def main() -> int:
         f"server={server_cfg} reindex={reindex_cfg} check_excludes={check_excludes}",
     ))
 
-    # vault-check's freshness math must mirror the same chunking numbers
+    # vault-check's freshness math must mirror the same chunking numbers.
+    # Smoke leg: it collects every int literal in the file, so an unrelated
+    # constant of 3000/200 could in principle false-pass -- the load-bearing
+    # parity is the named-constant check above (server vs reindex).
     check_ints = _int_literals(check_tree)
     math_ok = {EXPECTED_CHUNK_SIZE, EXPECTED_CHUNK_OVERLAP} <= check_ints
     checks.append((
@@ -182,7 +208,7 @@ def main() -> int:
         detail = "; ".join(f"{name}: {msg}" for name, ok, msg in checks if not ok)
         return _emit("fail", f"contract drift: {', '.join(failed)} — {detail}", {}, errors, t0)
 
-    detail = "; ".join(msg for _, _, msg in checks)
+    detail = "; ".join(msg for _, _, msg in checks if msg)
     return _emit("pass", f"contract intact ({len(checks)} checks) — {detail}", {"checks": checks}, errors, t0)
 
 
