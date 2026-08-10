@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-10T01:54:06+00:00",
-  "count": 364,
+  "generated_at": "2026-08-10T02:37:39+00:00",
+  "count": 365,
   "containers": [
     "ai-systems-field-consultant",
     "apple",
@@ -45,6 +45,7 @@
     "srse-deliverables",
     "strategy",
     "testing",
+    "vault-check-first",
     "vault-reuse-audit",
     "vault-search",
     "yuanbao"
@@ -2937,6 +2938,14 @@
       "container": "testing",
       "dir": "/Users/lordwilson/.hermes/skills/testing/prototype-hardening",
       "skill_md": "/Users/lordwilson/.hermes/skills/testing/prototype-hardening/SKILL.md"
+    },
+    {
+      "skill_id": "vault-check-first",
+      "name": "vault-check-first",
+      "description": "Check Wilson's Obsidian vault before starting business or client work. Wraps the semantic search at ~/bin/vault-check.py -- a freshness-gated wrapper over msb-v3's Qdrant-backed /rag/search (tenant wilson-vault) -- so answers about prior decisions, client context, or architecture come from what is a",
+      "container": "vault-check-first",
+      "dir": "/Users/lordwilson/.hermes/skills/vault-check-first",
+      "skill_md": "/Users/lordwilson/.hermes/skills/vault-check-first/SKILL.md"
     },
     {
       "skill_id": "vault-reuse-audit",
