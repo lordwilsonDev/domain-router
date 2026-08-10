@@ -1,10 +1,11 @@
 name: routing-gate
 
-# Zero-spend routing gate for the domain-router: the 23 unit tests (d02) and
-# the routing-accuracy replay eval (d04, 25 hand-labeled cases, top-1 gated at
-# 0.8) on every push to main, daily (06:30 UTC), and manual dispatch.
+# Zero-spend routing gate for the domain-router: the 23 unit tests (d02), the
+# routing-accuracy replay eval (d04, 25 hand-labeled cases, top-1 gated at
+# 0.8), and the vault-search MCP contract gate (d06) on every push to main,
+# daily (06:30 UTC), and manual dispatch.
 #
-# Both legs forward to the CANONICAL runtime in the private
+# Both d02/d04 legs forward to the CANONICAL runtime in the private
 # lordwilsonDev/skill-orchestration-os repo, so that sibling is checked out
 # inside the workspace (actions/checkout rejects paths outside
 # GITHUB_WORKSPACE) using the GH_PAT secret. Inert without the secret — the
@@ -22,6 +23,17 @@ name: routing-gate
 #   python scripts/hygiene/d04_routing_accuracy_runner.py --live
 # (requires DEEPSEEK_API_KEY; the only spending mode) and commit the
 # re-recorded recorded_responses.jsonl. CI cannot re-record — it has no key.
+#
+# The d06 leg verifies the vault-search MCP contract: tool_manifest.json must
+# match the server's @mcp.tool() surface, and the 3000/200/excludes chunking
+# contract must agree across ~/vault-search-mcp/server.py, ~/bin/vault-reindex.py,
+# and ~/bin/vault-check.py (AST check, zero spend). Its four source files live
+# in two OTHER repos (lordwilsonDev/vault-search-mcp and
+# lordwilsonDev/vault-tooling), so this workflow probes for them first. Until
+# those repos are pushed, the d06 step SKIPS VISIBLY with an explicit message
+# — the same "skip, never silently" doctrine as the GH_PAT gating. Push the
+# two vault repos to activate full enforcement; no further workflow edits are
+# needed.
 
 on:
   push:
@@ -68,3 +80,70 @@ jobs:
         run: |
           python scripts/hygiene/d04_routing_accuracy_runner.py > /tmp/d04.json 2>&1 || { echo 'd04 runner failed:'; tail -20 /tmp/d04.json; exit 1; }
           python -c 'import json; d=json.load(open("/tmp/d04.json")); print("d04:", d["mode"], "|", d["verdict"], "|", d["actual_behavior"]); assert d["mode"] == "replay" and d["verdict"] == "pass", d["errors"]'
+
+      - name: Probe vault-search-mcp (contract sources on GitHub?)
+        if: env.GH_PAT != ''
+        id: probe-vault-search-mcp
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-search-mcp.git" HEAD >/dev/null 2>&1 \
+            && echo available=true >> "$GITHUB_OUTPUT" \
+            || echo available=false >> "$GITHUB_OUTPUT"
+
+      - name: Probe vault-tooling (bin tooling on GitHub?)
+        if: env.GH_PAT != ''
+        id: probe-vault-tooling
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" HEAD >/dev/null 2>&1 \
+            && echo available=true >> "$GITHUB_OUTPUT" \
+            || echo available=false >> "$GITHUB_OUTPUT"
+
+      - name: Checkout vault-search-mcp (server + manifest contract)
+        if: env.GH_PAT != '' && steps.probe-vault-search-mcp.outputs.available == 'true'
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        uses: actions/checkout@v4
+        with:
+          repository: lordwilsonDev/vault-search-mcp
+          token: ${{ secrets.GH_PAT }}
+          path: vault-search-mcp
+
+      - name: Checkout vault-tooling (vault-check.py + vault-reindex.py)
+        if: env.GH_PAT != '' && steps.probe-vault-tooling.outputs.available == 'true'
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        uses: actions/checkout@v4
+        with:
+          repository: lordwilsonDev/vault-tooling
+          token: ${{ secrets.GH_PAT }}
+          path: vault-tooling
+
+      - name: d06 vault-search MCP contract gate (zero-spend)
+        if: env.GH_PAT != ''
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          MCP_SERVER: ${{ github.workspace }}/vault-search-mcp/server.py
+          MCP_MANIFEST: ${{ github.workspace }}/vault-search-mcp/tool_manifest.json
+          VAULT_REINDEX: ${{ github.workspace }}/vault-tooling/vault-reindex.py
+          VAULT_CHECK: ${{ github.workspace }}/vault-tooling/vault-check.py
+        run: |
+          set -euo pipefail
+          # SKIP VISIBLY when the contract repos are not pushed to GitHub yet —
+          # never silently. Enforcement auto-activates once they exist.
+          MISSING=""
+          if [ ! -f "$MCP_SERVER" ] || [ ! -f "$MCP_MANIFEST" ]; then
+            MISSING="$MISSING vault-search-mcp"
+          fi
+          if [ ! -f "$VAULT_REINDEX" ] || [ ! -f "$VAULT_CHECK" ]; then
+            MISSING="$MISSING vault-tooling"
+          fi
+          if [ -n "$MISSING" ]; then
+            echo "SKIPPED d06 — contract sources not on GitHub yet:$MISSING"
+            echo "Push lordwilsonDev/vault-search-mcp + lordwilsonDev/vault-tooling to activate full enforcement."
+            exit 0
+          fi
+          python scripts/hygiene/d06_vault_search_mcp_runner.py > /tmp/d06.json 2>&1 || { echo 'd06 runner failed:'; tail -20 /tmp/d06.json; exit 1; }
+          python -c 'import json; d=json.load(open("/tmp/d06.json")); print("d06:", d["verdict"], "|", d["actual_behavior"]); assert d["verdict"] == "pass", d["errors"]'
