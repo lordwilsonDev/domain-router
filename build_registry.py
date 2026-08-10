@@ -53,8 +53,26 @@ def main(argv: list[str] | None = None) -> int:
     data = _canonical.build()
     args = argv if argv is not None else sys.argv[1:]
     if "--rebuild" in args:
-        OUT_PATH.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
-        print(f"wrote {OUT_PATH} ({data['count']} skills, {len(data['containers'])} containers)")
+        new_text = json.dumps(data, indent=2) + "\n"
+        changed = True
+        if OUT_PATH.exists():
+            try:
+                old = json.loads(OUT_PATH.read_text(encoding="utf-8"))
+                old.pop("generated_at", None)
+                new = dict(data)
+                new.pop("generated_at", None)
+                changed = old != new
+            except (json.JSONDecodeError, OSError):
+                changed = True
+        if changed:
+            OUT_PATH.write_text(new_text, encoding="utf-8")
+            print(f"wrote {OUT_PATH} ({data['count']} skills, {len(data['containers'])} containers)")
+        else:
+            # Content identical: preserve the on-disk generated_at so a daily
+            # gate run never dirties the tree (timestamp reflects the last REAL
+            # registry change, which is the evidence that matters).
+            print(f"unchanged {OUT_PATH} ({data['count']} skills, "
+                  f"{len(data['containers'])} containers) \u2014 timestamp preserved")
     else:
         blank = [e["skill_id"] for e in data["skills"] if not e["description"].strip()]
         print(f"{data['count']} skills across {len(data['containers'])} containers")
