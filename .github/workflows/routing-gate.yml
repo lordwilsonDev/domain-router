@@ -69,8 +69,14 @@ jobs:
           esac
           echo "GH_PAT length: ${#GH_PAT}"
           echo -n "$GH_PAT" | shasum -a 256 | cut -c1-16 | xargs echo 'GH_PAT sha256-16:'
-          echo '--- vault-tooling probe with visible error ---'
+          echo '--- probe scheme 1: x-access-token ---'
           git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" 2>&1 | head -3
+          echo '--- probe scheme 2: oauth2 ---'
+          git ls-remote "https://oauth2:${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" 2>&1 | head -3
+          echo '--- probe scheme 3: token-as-user ---'
+          git ls-remote "https://${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" 2>&1 | head -3
+          echo '--- api check ---'
+          GH_TOKEN="$GH_PAT" gh api repos/lordwilsonDev/vault-tooling -q .full_name 2>&1 | head -2
 
       - name: Checkout skill-orchestration-os (canonical runtime)
         if: env.GH_PAT != ''
