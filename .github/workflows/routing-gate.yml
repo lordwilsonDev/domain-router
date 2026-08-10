@@ -87,7 +87,9 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-search-mcp.git" HEAD >/dev/null 2>&1 \
+          # No HEAD ref on purpose: ls-remote on a freshly pushed EMPTY repo
+          # would fail on a HEAD ref and falsely report available=false.
+          git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-search-mcp.git" >/dev/null 2>&1 \
             && echo available=true >> "$GITHUB_OUTPUT" \
             || echo available=false >> "$GITHUB_OUTPUT"
 
@@ -97,7 +99,7 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" HEAD >/dev/null 2>&1 \
+          git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" >/dev/null 2>&1 \
             && echo available=true >> "$GITHUB_OUTPUT" \
             || echo available=false >> "$GITHUB_OUTPUT"
 
@@ -131,17 +133,18 @@ jobs:
           VAULT_CHECK: ${{ github.workspace }}/vault-tooling/vault-check.py
         run: |
           set -euo pipefail
-          # SKIP VISIBLY when the contract repos are not pushed to GitHub yet —
-          # never silently. Enforcement auto-activates once they exist.
-          MISSING=""
+          # SKIP VISIBLY when the contract sources are unavailable to this PAT
+          # (unpushed repo, or the PAT lacks read access) — never silently.
+          # Enforcement auto-activates once both repos exist; no further edits.
+          MISSING=()
           if [ ! -f "$MCP_SERVER" ] || [ ! -f "$MCP_MANIFEST" ]; then
-            MISSING="$MISSING vault-search-mcp"
+            MISSING+=(vault-search-mcp)
           fi
           if [ ! -f "$VAULT_REINDEX" ] || [ ! -f "$VAULT_CHECK" ]; then
-            MISSING="$MISSING vault-tooling"
+            MISSING+=(vault-tooling)
           fi
-          if [ -n "$MISSING" ]; then
-            echo "SKIPPED d06 — contract sources not on GitHub yet:$MISSING"
+          if [ "${#MISSING[@]}" -ne 0 ]; then
+            echo "SKIPPED d06 — contract sources unavailable to this PAT (unpushed or no read access): ${MISSING[*]}"
             echo "Push lordwilsonDev/vault-search-mcp + lordwilsonDev/vault-tooling to activate full enforcement."
             exit 0
           fi
