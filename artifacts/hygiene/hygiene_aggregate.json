@@ -1,51 +1,15 @@
 {
-  "timestamp": "2026-08-10T14:48:37.531940+00:00",
+  "timestamp": "2026-08-10T15:09:59.146572+00:00",
   "environment": {
     "repo": "/Users/lordwilson/.hermes/domain-router",
     "python": "/opt/homebrew/Caskroom/miniforge/base/bin/python",
-    "experiments": 7
+    "experiments": 1
   },
   "results": [
     {
-      "experiment": "d01_registry_integrity",
-      "verdict": "pass",
-      "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d01_registry_integrity_20260810T144835Z.json",
-      "returncode": 0
-    },
-    {
-      "experiment": "d02_test_suite",
-      "verdict": "pass",
-      "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d02_test_suite_20260810T144836Z.json",
-      "returncode": 0
-    },
-    {
       "experiment": "d03_orchestration_smoke",
       "verdict": "pass",
-      "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d03_orchestration_smoke_20260810T144836Z.json",
-      "returncode": 0
-    },
-    {
-      "experiment": "d04_routing_accuracy",
-      "verdict": "pass",
-      "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d04_routing_accuracy_20260810T144836Z.json",
-      "returncode": 0
-    },
-    {
-      "experiment": "d05_vault_freshness",
-      "verdict": "pass",
-      "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d05_vault_freshness_20260810T144837Z.json",
-      "returncode": 0
-    },
-    {
-      "experiment": "d06_vault_search_mcp",
-      "verdict": "pass",
-      "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d06_vault_search_mcp_20260810T144837Z.json",
-      "returncode": 0
-    },
-    {
-      "experiment": "d07_structural_classifier",
-      "verdict": "pass",
-      "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d07_structural_classifier_20260810T144837Z.json",
+      "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d03_orchestration_smoke_20260810T150958Z.json",
       "returncode": 0
     }
   ],
