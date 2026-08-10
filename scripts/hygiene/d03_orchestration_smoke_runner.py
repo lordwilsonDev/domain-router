@@ -2,7 +2,7 @@
 """d03_orchestration_smoke_runner.py — the folded front-end's own smoke suite.
 
 The domain-router was folded into skill-orchestration-os as its routing
-front-end; the OS's smoke suite (scripts/smoke_test.py, 26 tests) proves the
+front-end; the OS's smoke suite (scripts/smoke_test.py, 27 tests) proves the
 whole OS still works — registry, planner (incl. route-aware prompt + wrapped-
 steps normalization + replanning), executor (incl. the `route` DAG step +
 unknown-domain rejection + per-step verification), audit, meta-learner, the
@@ -85,11 +85,11 @@ def main() -> int:
             "input": f"orchestration-os scripts/smoke_test.py ({SMOKE})",
             "environment": f"domain-router repo @ {REPO}",
             "failure_injected": "none — full OS smoke suite is the regression probe",
-            "expected_behavior": "all 26 OS smoke tests pass (registry, planner incl. route + replan, executor incl. route skill + verification, audit, meta-learner, CLI dry-run, stubbed dispatch, reality loop, feedback events, replay-consumer gate leg, replay-events CLI, vault-check-first, sovereign-verification, registry sync)",
+            "expected_behavior": "all 27 OS smoke tests pass (registry, planner incl. route + replan, executor incl. route skill + verification, audit, meta-learner, CLI dry-run, stubbed dispatch, reality loop, feedback events, replay-consumer gate leg, replay-events CLI, vendored-consumer parity, vault-check-first, sovereign-verification, registry sync)",
             "actual_behavior": f"smoke_test.py not found: {SMOKE}",
             "latency_ms": 0,
             "errors": [f"missing {SMOKE} — orchestration-os smoke suite not present"],
-            "state_before": {"orchestration_os": str(ORCH), "smoke_tests": 26},
+            "state_before": {"orchestration_os": str(ORCH), "smoke_tests": 27},
             "state_after": {"passed": False, "reason": "blocked"},
             "recovery": "install skill-orchestration-os at ~/.hermes/skills or point ORCH_OS at it",
             "false_repair": False,
@@ -112,7 +112,7 @@ def main() -> int:
 
     combined = (proc.stdout or "") + "\n" + (proc.stderr or "")
     passed = proc.returncode == 0
-    # Evidence line: the smoke suite's "N/26 passed" footer.
+    # Evidence line: the smoke suite's "N/27 passed" footer.
     evidence = [line.strip() for line in combined.splitlines() if re.search(r"\d+/\d+ passed", line)]
     summary = evidence[-1] if evidence else f"smoke exit {proc.returncode}"
 
@@ -121,14 +121,14 @@ def main() -> int:
         "experiment_id": "d03_orchestration_smoke",
         "artifact": str(out),
         "skill": "regression-hygiene",
-        "input": "orchestration-os scripts/smoke_test.py (26 tests: registry, planner, executor incl. route skill + verification, audit, meta-learner, CLI dry-run, stubbed dispatch, reality loop, feedback events, replay-consumer gate leg, replay-events CLI, vault-check-first, sovereign-verification, registry sync)",
+        "input": "orchestration-os scripts/smoke_test.py (27 tests: registry, planner, executor incl. route skill + verification, audit, meta-learner, CLI dry-run, stubbed dispatch, reality loop, feedback events, replay-consumer gate leg, replay-events CLI, vendored-consumer parity, vault-check-first, sovereign-verification, registry sync)",
         "environment": f"domain-router repo @ {REPO}",
         "failure_injected": "none — full OS smoke suite is the regression probe",
-        "expected_behavior": "all 26 OS smoke tests pass (0-spend; uses --domain + dry-run only)",
+        "expected_behavior": "all 27 OS smoke tests pass (0-spend; uses --domain + dry-run only)",
         "actual_behavior": f"exit={proc.returncode} {summary}",
         "latency_ms": latency_ms,
         "errors": [] if passed else [(proc.stderr or "")[-300:]],
-        "state_before": {"orchestration_os": str(ORCH), "smoke_tests": 26, "zero_spend": True, "env_scrubbed": list(ZERO_SPEND_ENV_VARS)},
+        "state_before": {"orchestration_os": str(ORCH), "smoke_tests": 27, "zero_spend": True, "env_scrubbed": list(ZERO_SPEND_ENV_VARS)},
         "state_after": {"exit": proc.returncode, "passed": passed, "summary": summary},
         "recovery": "n/a — read-only verification",
         "false_repair": False,
