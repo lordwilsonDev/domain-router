@@ -23,9 +23,13 @@
     "d06_vault_search_mcp": {
       "skill": "knowledge-hygiene",
       "runner": "d06_vault_search_mcp_runner.py"
+    },
+    "d07_structural_classifier": {
+      "skill": "hot-loop-safety-audit",
+      "runner": "d07_structural_classifier_runner.py"
     }
   },
   "live_auth": false,
   "pytest_target": "test_router.py",
-  "note": "Pure-CLI tool (no server/daemon), so the factory's live-auth probe is scoped out. The routing table (domains.json) is verified on every rebuild by d01; the 23 unit tests are re-run by d02; the folded front-end's own OS smoke suite (15 tests) is re-run by d03; routing accuracy over the hand-labeled 25-case fixture (replay, zero-spend, gated at 0.8) is enforced by d04; and the wilson-vault semantic index freshness (vault-check.py --fresh, zero-spend) is enforced by d05 — a stale index silently lies to every vault-grounded answer; and d06 verifies the vault-search MCP contract (manifest matches the server's tools, and the 3000/200/excludes chunking contract is identical across server.py, vault-reindex.py, and vault-check.py — AST check, zero-spend). pytest_target overrides the factory's default 'tests/' because this repo keeps its tests at the root."
+  "note": "Pure-CLI tool (no server/daemon), so the factory's live-auth probe is scoped out. The routing table (domains.json) is verified on every rebuild by d01; the 23 unit tests are re-run by d02; the folded front-end's own OS smoke suite (15 tests) is re-run by d03; routing accuracy over the hand-labeled 25-case fixture (replay, zero-spend, gated at 0.8) is enforced by d04; and the wilson-vault semantic index freshness (vault-check.py --fresh, zero-spend) is enforced by d05 — a stale index silently lies to every vault-grounded answer; and d06 verifies the vault-search MCP contract (manifest matches the server's tools, and the 3000/200/excludes chunking contract is identical across server.py, vault-reindex.py, and vault-check.py — AST check, zero-spend); and d07 runs the hot-loop-safety-audit skill's executable Step-2 gate — structural_classifier.py --self-test must come back fully green (26/26 labeled oracle cases covering one-line types, inferred-literal changes, closure-initialized stored props, removed live-root singletons, conformance-via-extension — the classifier lives in the local ~/bin repo, mirrored to lordwilsonDev/vault-tooling). pytest_target overrides the factory's default 'tests/' because this repo keeps its tests at the root."
 }

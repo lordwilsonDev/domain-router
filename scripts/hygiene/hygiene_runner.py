@@ -26,6 +26,14 @@ Experiments (serverless — this is a pure CLI tool, no daemon to probe):
                           chunking contract must agree across server.py,
                           vault-reindex.py, and vault-check.py (AST check,
                           zero-spend) — drift silently corrupts freshness math
+  d07_structural_classifier  the hot-loop-safety-audit skill's executable
+                          Step-2 gate: structural_classifier.py --self-test must
+                          come back fully green (26/26 labeled oracle cases —
+                          one-line types, inferred-literal changes, closure
+                          stored props, removed live-root singletons,
+                          conformance-via-extension). The classifier lives in
+                          the local ~/bin repo (mirrored to
+                          lordwilsonDev/vault-tooling).
 
 Usage:
     python hygiene_runner.py --all                 # run every experiment
@@ -62,6 +70,7 @@ EXPERIMENTS: dict[str, Path] = {
     "d04_routing_accuracy": HERE / "d04_routing_accuracy_runner.py",
     "d05_vault_freshness": HERE / "d05_vault_freshness_runner.py",
     "d06_vault_search_mcp": HERE / "d06_vault_search_mcp_runner.py",
+    "d07_structural_classifier": HERE / "d07_structural_classifier_runner.py",
 }
 
 _WEIGHT = {"fail": 0, "partial": 1, "blocked": 2, "pass": 3, "unknown": 4}

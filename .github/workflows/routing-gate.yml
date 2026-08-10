@@ -150,3 +150,23 @@ jobs:
           fi
           python scripts/hygiene/d06_vault_search_mcp_runner.py > /tmp/d06.json 2>&1 || { echo 'd06 runner failed:'; tail -20 /tmp/d06.json; exit 1; }
           python -c 'import json; d=json.load(open("/tmp/d06.json")); print("d06:", d["verdict"], "|", d["actual_behavior"]); assert d["verdict"] == "pass", d["errors"]'
+
+      - name: d07 structural-classifier oracle gate (zero-spend)
+        if: env.GH_PAT != ''
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          STRUCTURAL_CLASSIFIER: ${{ github.workspace }}/vault-tooling/structural_classifier.py
+          STRUCTURAL_CASES: ${{ github.workspace }}/vault-tooling/structural_cases.jsonl
+        run: |
+          set -euo pipefail
+          # SKIP VISIBLY when the classifier source is unavailable to this PAT
+          # (vault-tooling unpushed, or the PAT lacks read access) — never
+          # silently. Enforcement auto-activates once the repo is pushed with
+          # structural_classifier.py + structural_cases.jsonl; no further edits.
+          if [ ! -f "$STRUCTURAL_CLASSIFIER" ] || [ ! -f "$STRUCTURAL_CASES" ]; then
+            echo "SKIPPED d07 — classifier sources (structural_classifier.py + structural_cases.jsonl) unavailable to this PAT (vault-tooling unpushed or no read access)"
+            echo "Push lordwilsonDev/vault-tooling (~/bin mirror, incl. structural_classifier.py + structural_cases.jsonl) to activate full enforcement."
+            exit 0
+          fi
+          python scripts/hygiene/d07_structural_classifier_runner.py > /tmp/d07.json 2>&1 || { echo 'd07 runner failed:'; tail -20 /tmp/d07.json; exit 1; }
+          python -c 'import json; d=json.load(open("/tmp/d07.json")); print("d07:", d["verdict"], "|", d["actual_behavior"]); assert d["verdict"] == "pass", d["errors"]'
