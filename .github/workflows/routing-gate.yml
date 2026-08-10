@@ -65,8 +65,10 @@ jobs:
           case "$GH_PAT" in
             ghp_*) echo "GH_PAT type: classic";;
             github_pat_*) echo "GH_PAT type: fine-grained";;
-            *) echo "GH_PAT type: other (len=${#GH_PAT})";;
+            *) echo "GH_PAT type: other";;
           esac
+          echo "GH_PAT length: ${#GH_PAT}"
+          echo -n "$GH_PAT" | shasum -a 256 | cut -c1-16 | xargs echo 'GH_PAT sha256-16:'
           echo '--- vault-tooling probe with visible error ---'
           git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" 2>&1 | head -3
 
