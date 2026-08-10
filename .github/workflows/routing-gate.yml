@@ -81,10 +81,12 @@ jobs:
           git config --global --list 2>/dev/null | grep -iE 'credential|url\.|insteadof|extraheader|proxy' | head -6
           echo '--- raw smart-http probe (curl, Bearer) ---'
           curl -s -o /dev/null -w 'http=%{http_code}\n' -H "Authorization: Bearer ${GH_PAT}" "https://github.com/lordwilsonDev/vault-tooling.git/info/refs?service=git-upload-pack"
-          echo '--- repo-local extraheader present? ---'
-          git config --local --get-regexp 'http\..*extraheader' 2>/dev/null | sed 's/=.*/=<redacted>/' | head -2
-          echo '--- git with extraheader cleared ---'
-          git -c http.https://github.com/.extraheader= ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" 2>&1 | head -3
+          echo '--- git version ---'
+          git --version
+          echo '--- control: ls-remote to skill-orchestration-os (token PROVEN to read it via checkout) ---'
+          git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/skill-orchestration-os.git" 2>&1 | head -3
+          echo '--- basic-auth curl to vault-tooling (the way git authenticates) ---'
+          curl -s -o /dev/null -w 'http=%{http_code}\n' -u "x-access-token:${GH_PAT}" "https://github.com/lordwilsonDev/vault-tooling.git/info/refs?service=git-upload-pack"
 
       - name: Checkout skill-orchestration-os (canonical runtime)
         if: env.GH_PAT != ''
