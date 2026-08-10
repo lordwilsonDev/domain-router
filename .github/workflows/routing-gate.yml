@@ -2,8 +2,15 @@ name: routing-gate
 
 # Zero-spend routing gate for the domain-router: the 23 unit tests (d02), the
 # routing-accuracy replay eval (d04, 25 hand-labeled cases, top-1 gated at
-# 0.8), and the vault-search MCP contract gate (d06) on every push to main,
-# daily (06:30 UTC), and manual dispatch.
+# 0.8), the vault-search MCP contract gate (d06), the structural-classifier
+# oracle (d07), and the T5 mutation floor (fresh mutmut run must score >= 50%)
+# on every push to main, daily (06:30 UTC), and manual dispatch.
+#
+# The mutation floor mirrors the coverage floor in the other repos: it
+# re-measures freshly on the pushed code (never trusts the committed
+# mutation_score.json, which would be stale against a new HEAD) and fails
+# closed — mutmut failure, no-mutants-dir, or a score below 50% all fail the
+# job. mutmut is pinned to 3.7.0 so CI scores match the local runs.
 #
 # Both d02/d04 legs forward to the CANONICAL runtime in the private
 # lordwilsonDev/skill-orchestration-os repo, so that sibling is checked out
@@ -189,3 +196,18 @@ jobs:
           fi
           python scripts/hygiene/d07_structural_classifier_runner.py > /tmp/d07.json 2>&1 || { echo 'd07 runner failed:'; tail -20 /tmp/d07.json; exit 1; }
           python -c 'import json; d=json.load(open("/tmp/d07.json")); print("d07:", d["verdict"], "|", d["actual_behavior"]); assert d["verdict"] == "pass", d["errors"]'
+
+      - name: Mutation floor (T5 gate — fresh mutmut run >= 50%)
+        if: env.GH_PAT != ''
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          set -euo pipefail
+          # Fresh measurement on the pushed code (a committed mutation_score.json
+          # would be stale against a new HEAD — never trust it in CI).
+          # test_router.py imports the canonical runtime, so this leg needs the
+          # skill-orchestration-os checkout above (hence the GH_PAT gate).
+          pip install -q 'mutmut==3.7.0' pytest pytest-cov
+          mutmut run 2>&1 | tee /tmp/mutmut.log | tail -3
+          # Fail-closed: exit 1 below 50%, exit 2 if mutmut never produced verdicts.
+          python scripts/hygiene/mutation_score_snapshot.py --min 50
