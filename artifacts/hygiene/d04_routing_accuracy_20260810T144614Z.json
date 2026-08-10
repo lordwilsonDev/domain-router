@@ -1,0 +1,292 @@
+{
+  "experiment_id": "d04_routing_accuracy",
+  "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d04_routing_accuracy_20260810T144614Z.json",
+  "skill": "regression-hygiene",
+  "input": "routing_cases.jsonl (25 cases) vs canonical registry (367 skills)",
+  "environment": "domain-router repo @ /Users/lordwilson/.hermes/domain-router",
+  "mode": "replay",
+  "expected_behavior": "top-1 accuracy >= 0.8 on the real classifier pipeline; no fixture drift",
+  "actual_behavior": "top-1 accuracy 0.92 (23/25) >= 0.8 | container 0.96 (24/25) | tricky 0.83",
+  "latency_ms": 26,
+  "errors": [],
+  "state_before": {
+    "cases": 25,
+    "registry_skills": 367,
+    "threshold": 0.8,
+    "mode": "replay",
+    "max_calls": null
+  },
+  "state_after": {
+    "accuracy": 0.92,
+    "correct": 23,
+    "total": 25,
+    "container_accuracy": 0.96,
+    "container_correct": 24,
+    "tricky_accuracy": 0.8333333333333334,
+    "passed": true,
+    "summary": "top-1 accuracy 0.92 (23/25) >= 0.8 | container 0.96 (24/25) | tricky 0.83",
+    "live_calls": null,
+    "per_case": [
+      {
+        "id": "c01",
+        "task": "Send my wife a text that I am running 20 minutes late for dinner",
+        "expected": "apple/imessage",
+        "predicted": "apple/apple-imessage",
+        "container_ok": false,
+        "ok": false,
+        "reason": "This skill sends iMessages/SMS via the imsg CLI on macOS, which is exactly what's needed to text your wife.",
+        "tricky": false
+      },
+      {
+        "id": "c02",
+        "task": "Turn on the living room lights at 50% brightness when the sun sets",
+        "expected": "smart-home/openhue",
+        "predicted": "smart-home/openhue",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill controls Philips Hue lights, which is the only smart-home lighting skill available for adjusting brightness and scheduling based on sunset.",
+        "tricky": false
+      },
+      {
+        "id": "c03",
+        "task": "Create a GitHub issue to track the API rate-limit bug we found in staging",
+        "expected": "github/github-issues",
+        "predicted": "github/github-issues",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill directly handles creating and managing GitHub issues, which is exactly what the task requires.",
+        "tricky": false
+      },
+      {
+        "id": "c04",
+        "task": "Pull the transcript of this YouTube video and turn it into a summary thread",
+        "expected": "media/youtube-content",
+        "predicted": "media/youtube-content",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill handles YouTube transcripts and converts them into summaries, threads, and blogs.",
+        "tricky": false
+      },
+      {
+        "id": "c05",
+        "task": "Search arXiv for recent papers on mixture-of-experts language models",
+        "expected": "research/arxiv",
+        "predicted": "research/arxiv",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill directly searches arXiv papers by keyword, which matches the task of finding recent papers on mixture-of-experts language models.",
+        "tricky": false
+      },
+      {
+        "id": "c06",
+        "task": "Add a note to my Obsidian vault capturing the Q3 planning session decisions",
+        "expected": "note-taking/obsidian",
+        "predicted": "note-taking/obsidian",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill directly handles reading, searching, creating, and editing notes in the Obsidian vault, which is exactly what's needed to add a note.",
+        "tricky": false
+      },
+      {
+        "id": "c07",
+        "task": "Send an email to the landlord from my agent's dedicated inbox about the leak",
+        "expected": "email/agentmail",
+        "predicted": "email/agentmail",
+        "container_ok": true,
+        "ok": true,
+        "reason": "The task requires sending an email from the agent's own dedicated inbox, which is exactly what the agentmail skill provides.",
+        "tricky": true
+      },
+      {
+        "id": "c08",
+        "task": "Benchmark llama.cpp GGUF inference speed for our newly quantized model",
+        "expected": "mlops/inference/llama-cpp",
+        "predicted": "mlops/inference/llama-cpp",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill directly covers llama.cpp local GGUF inference and is the best fit for benchmarking the quantized model's speed.",
+        "tricky": false
+      },
+      {
+        "id": "c09",
+        "task": "Post this product announcement to X with a link to the blog post",
+        "expected": "social-media/xurl",
+        "predicted": "social-media/xurl",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill handles X/Twitter posting via the xurl CLI, which is exactly what's needed to post the announcement.",
+        "tricky": false
+      },
+      {
+        "id": "c10",
+        "task": "Generate a 3Blue1Brown-style math animation explaining gradient descent",
+        "expected": "creative/manim-video",
+        "predicted": "creative/manim-video",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill is specifically for creating Manim CE animations in the style of 3Blue1Brown, which is exactly what the task requires.",
+        "tricky": false
+      },
+      {
+        "id": "c11",
+        "task": "Fill in the signature fields of the client contract PDF and merge it with the addendum",
+        "expected": "productivity/pdf",
+        "predicted": "productivity/nano-pdf",
+        "container_ok": true,
+        "ok": false,
+        "reason": "This skill edits text in existing PDFs via natural-language prompts, which fits filling in signature fields and merging with an addendum.",
+        "tricky": true
+      },
+      {
+        "id": "c12",
+        "task": "Find the nearest coffee shop and route me there",
+        "expected": "productivity/maps",
+        "predicted": "productivity/maps",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill handles geocoding, POIs, and routes via OpenStreetMap/OSRM, which is exactly what's needed to find a nearby coffee shop and get directions.",
+        "tricky": false
+      },
+      {
+        "id": "c13",
+        "task": "Review this pull request's diff for security issues and leave inline comments on the PR",
+        "expected": "github/github-code-review",
+        "predicted": "github/github-code-review",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill reviews PRs with diffs and inline comments via gh or REST, which directly matches the task.",
+        "tricky": true
+      },
+      {
+        "id": "c14",
+        "task": "Set up Husky pre-commit hooks with lint-staged and type checking in this repo",
+        "expected": "mattpocock-skills/misc/setup-pre-commit",
+        "predicted": "mattpocock-skills/misc/setup-pre-commit",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill is specifically for setting up Husky pre-commit hooks with lint-staged and type checking in the current repo.",
+        "tricky": false
+      },
+      {
+        "id": "c15",
+        "task": "Resolve the in-progress git merge conflict on the feature branch",
+        "expected": "mattpocock-skills/engineering/resolving-merge-conflicts",
+        "predicted": "mattpocock-skills/engineering/resolving-merge-conflicts",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill is specifically designed for resolving in-progress git merge/rebase conflicts.",
+        "tricky": false
+      },
+      {
+        "id": "c16",
+        "task": "Check the current odds on the AI regulation prediction market",
+        "expected": "research/polymarket",
+        "predicted": "research/polymarket",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill directly queries Polymarket for market prices and odds, which matches the task of checking current odds on an AI regulation prediction market.",
+        "tricky": false
+      },
+      {
+        "id": "c17",
+        "task": "Draw a dark-themed SVG architecture diagram of our cloud infrastructure",
+        "expected": "creative/architecture-diagram",
+        "predicted": "creative/architecture-diagram",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill is specifically for creating dark-themed SVG architecture/cloud/infra diagrams as HTML.",
+        "tricky": false
+      },
+      {
+        "id": "c18",
+        "task": "Review this 20k-line diff for security, quality, and correctness before merge",
+        "expected": "code-reviewer",
+        "predicted": "code-reviewer",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This task is to review a large diff for security, quality, and correctness, which is the exact purpose of the code-reviewer skill.",
+        "tricky": true
+      },
+      {
+        "id": "c19",
+        "task": "Turn the current conversation into a spec and publish it to the project issue tracker",
+        "expected": "mattpocock-skills/engineering/to-spec",
+        "predicted": "mattpocock-skills/engineering/to-spec",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill directly matches the task of turning the current conversation into a spec and publishing it to the project issue tracker.",
+        "tricky": false
+      },
+      {
+        "id": "c20",
+        "task": "Debug why the self-hosted n8n webhook workflow is returning 500s",
+        "expected": "software-development/n8n-workflow-debugging",
+        "predicted": "software-development/n8n-workflow-debugging",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill specifically targets debugging n8n workflow REST API errors in self-hosted instances, which matches the task of diagnosing 500s in a self-hosted n8n webhook workflow.",
+        "tricky": true
+      },
+      {
+        "id": "c21",
+        "task": "Find the vault conversation transcripts about the Fox Valley deal",
+        "expected": "note-taking/vault-archive-mining",
+        "predicted": "note-taking/vault-archive-mining",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill is specifically designed to find vault conversation transcripts via semantic search, which matches the task of locating Fox Valley deal transcripts.",
+        "tricky": true
+      },
+      {
+        "id": "c22",
+        "task": "Scaffold a new Python package under src/ with a tests directory",
+        "expected": "software-development/python-src-package-scaffold",
+        "predicted": "software-development/python-src-package-scaffold",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill directly scaffolds Python packages under src/ with tests, matching the task exactly.",
+        "tricky": false
+      },
+      {
+        "id": "c23",
+        "task": "Show me the mel and chroma spectrogram features of this audio file",
+        "expected": "media/songsee",
+        "predicted": "media/songsee",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill provides audio spectrogram/feature extraction (mel, chroma, MFCC) via CLI, which directly matches the task.",
+        "tricky": false
+      },
+      {
+        "id": "c24",
+        "task": "Write a markdown plan to the plans directory without executing anything",
+        "expected": "software-development/plan",
+        "predicted": "software-development/plan",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill is specifically for writing a markdown plan to .hermes/plans/ without executing anything.",
+        "tricky": false
+      },
+      {
+        "id": "c25",
+        "task": "Humanize this AI-generated proposal so it does not sound like a bot wrote it",
+        "expected": "creative/humanizer",
+        "predicted": "creative/humanizer",
+        "container_ok": true,
+        "ok": true,
+        "reason": "This skill is specifically designed to strip AI-isms and add a real human voice to text.",
+        "tricky": false
+      }
+    ]
+  },
+  "recovery": "re-run with --live after description/skill changes to re-measure and re-record",
+  "false_repair": false,
+  "evidence": [
+    "accuracy=0.92 (23/25) threshold=0.8",
+    "container_acc=0.96 (24/25)",
+    "tricky_acc=0.83 (6 tricky cases)",
+    "c01 'Send my wife a text that I am running 20' expected=apple/imessage got=apple/apple-imessage",
+    "c11 'Fill in the signature fields of the clie' expected=productivity/pdf got=productivity/nano-pdf"
+  ],
+  "verdict": "pass"
+}
