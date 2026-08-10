@@ -17,6 +17,10 @@ Experiments (serverless — this is a pure CLI tool, no daemon to probe):
   d04_routing_accuracy  hand-labeled 25-case fixture through the real
                           classifier; top-1 accuracy gated at 0.8 (replay,
                           zero-spend) — the standing routing-quality guard
+  d05_vault_freshness  the wilson-vault semantic index must be FRESH vs the
+                          on-disk chunk estimate (vault-check.py --fresh,
+                          zero-spend) — a stale index silently lies to every
+                          vault-grounded answer
 
 Usage:
     python hygiene_runner.py --all                 # run every experiment
@@ -51,6 +55,7 @@ EXPERIMENTS: dict[str, Path] = {
     "d02_test_suite": HERE / "d02_test_suite_runner.py",
     "d03_orchestration_smoke": HERE / "d03_orchestration_smoke_runner.py",
     "d04_routing_accuracy": HERE / "d04_routing_accuracy_runner.py",
+    "d05_vault_freshness": HERE / "d05_vault_freshness_runner.py",
 }
 
 _WEIGHT = {"fail": 0, "partial": 1, "blocked": 2, "pass": 3, "unknown": 4}
