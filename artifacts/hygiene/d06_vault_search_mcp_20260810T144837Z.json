@@ -1,0 +1,48 @@
+{
+  "experiment_id": "d06_vault_search_mcp",
+  "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d06_vault_search_mcp_20260810T144837Z.json",
+  "skill": "knowledge-hygiene",
+  "input": "AST contract check: server.py / tool_manifest.json / vault-reindex.py / vault-check.py",
+  "environment": "domain-router repo @ /Users/lordwilson/.hermes/domain-router",
+  "failure_injected": "none \u2014 live contract check of the vault search surface",
+  "expected_behavior": "manifest matches server tools (search_vault, reindex_vault); chunking 3000/200/excludes identical across all three sources",
+  "actual_behavior": "contract intact (4 checks) \u2014 manifest=['reindex_vault', 'search_vault'] server=['reindex_vault', 'search_vault'] expected=['reindex_vault', 'search_vault']; server={'CHUNK_SIZE': 3000, 'CHUNK_OVERLAP': 200, 'EXCLUDE_DIRS': ('/Claude-Conversations/', '/.obsidian/', '/.git/')} reindex={'CHUNK_SIZE': 3000, 'CHUNK_OVERLAP': 200, 'EXCLUDE_DIRS': ('/Claude-Conversations/', '/.obsidian/', '/.git/')} check_excludes=('/Claude-Conversations/', '/.obsidian/', '/.git/'); int literals present: [200, 3000]",
+  "latency_ms": 2,
+  "errors": [],
+  "state_before": {
+    "server": "/Users/lordwilson/vault-search-mcp/server.py",
+    "manifest": "/Users/lordwilson/vault-search-mcp/tool_manifest.json",
+    "reindex": "/Users/lordwilson/bin/vault-reindex.py",
+    "vault_check": "/Users/lordwilson/bin/vault-check.py"
+  },
+  "state_after": {
+    "checks": [
+      [
+        "manifest matches server tool surface",
+        true,
+        "manifest=['reindex_vault', 'search_vault'] server=['reindex_vault', 'search_vault'] expected=['reindex_vault', 'search_vault']"
+      ],
+      [
+        "manifest entries have description + inputSchema",
+        true,
+        ""
+      ],
+      [
+        "chunking contract parity (server/reindex/check)",
+        true,
+        "server={'CHUNK_SIZE': 3000, 'CHUNK_OVERLAP': 200, 'EXCLUDE_DIRS': ('/Claude-Conversations/', '/.obsidian/', '/.git/')} reindex={'CHUNK_SIZE': 3000, 'CHUNK_OVERLAP': 200, 'EXCLUDE_DIRS': ('/Claude-Conversations/', '/.obsidian/', '/.git/')} check_excludes=('/Claude-Conversations/', '/.obsidian/', '/.git/')"
+      ],
+      [
+        "vault-check freshness math uses 3000/200",
+        true,
+        "int literals present: [200, 3000]"
+      ]
+    ]
+  },
+  "recovery": "fix the drifted file: regenerate the manifest from the server's @mcp.tool() surface, or restore the chunking constants to 3000/200 with the canonical excludes",
+  "false_repair": false,
+  "evidence": [
+    "contract intact (4 checks) \u2014 manifest=['reindex_vault', 'search_vault'] server=['reindex_vault', 'search_vault'] expected=['reindex_vault', 'search_vault']; server={'CHUNK_SIZE': 3000, 'CHUNK_OVERLAP': 200, 'EXCLUDE_DIRS': ('/Claude-Conversations/', '/.obsidian/', '/.git/')} reindex={'CHUNK_SIZE': 3000, 'CHUNK_OVERLAP': 200, 'EXCLUDE_DIRS': ('/Claude-Conversations/', '/.obsidian/', '/.git/')} check_excludes=('/Claude-Conversations/', '/.obsidian/', '/.git/'); int literals present: [200, 3000]"
+  ],
+  "verdict": "pass"
+}
