@@ -3,14 +3,14 @@
     "project_id": "e83f6156ceaa",
     "name": "domain-router",
     "root": "/Users/lordwilson/.hermes/domain-router",
-    "discovered_at": "2026-08-10T07:11:37.806579+00:00"
+    "discovered_at": "2026-08-10T07:12:39.105629+00:00"
   },
   "BASELINE": {
     "project": {
       "project_id": "e83f6156ceaa",
       "name": "domain-router",
       "root": "/Users/lordwilson/.hermes/domain-router",
-      "discovered_at": "2026-08-10T07:11:37.806579+00:00"
+      "discovered_at": "2026-08-10T07:12:39.105629+00:00"
     },
     "tests": "n/a",
     "git": "n/a",
@@ -20,8 +20,8 @@
   "VERIFICATION": {
     "pytest": {
       "passed": true,
-      "summary": "23 passed in 0.17s",
-      "duration_s": 1
+      "summary": "23 passed in 0.13s",
+      "duration_s": 0
     },
     "coverage": {
       "configured": false,
@@ -37,7 +37,7 @@
       "wrong_secret": null,
       "missing_secret": null
     },
-    "git_head": "64c02c187c3e7c3d4d7f12df791e8f16d8c38c7c"
+    "git_head": "97c9aa66995af2fe071300c96a1f3884acf760a8"
   },
   "SUITE_CONFIG": {
     "source": "<project>/scripts/hygiene/suite.json",
@@ -56,63 +56,63 @@
   "EVIDENCE_INDEX": {
     "claims_verified": 7,
     "artifacts": [
-      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d01_registry_integrity_20260810T071139Z.json",
-      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d02_test_suite_20260810T071140Z.json",
-      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d03_orchestration_smoke_20260810T071140Z.json",
-      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d04_routing_accuracy_20260810T071140Z.json",
-      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d05_vault_freshness_20260810T071140Z.json",
-      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d06_vault_search_mcp_20260810T071140Z.json",
-      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d07_structural_classifier_20260810T071141Z.json"
+      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d01_registry_integrity_20260810T071240Z.json",
+      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d02_test_suite_20260810T071241Z.json",
+      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d03_orchestration_smoke_20260810T071241Z.json",
+      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d04_routing_accuracy_20260810T071241Z.json",
+      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d05_vault_freshness_20260810T071241Z.json",
+      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d06_vault_search_mcp_20260810T071242Z.json",
+      "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d07_structural_classifier_20260810T071242Z.json"
     ],
-    "verified_at": "2026-08-10T07:11:41.030449+00:00",
+    "verified_at": "2026-08-10T07:12:42.066216+00:00",
     "member_results": [
       {
         "experiment": "d01_registry_integrity",
         "skill": "registry-hygiene",
         "verdict": "pass",
-        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d01_registry_integrity_20260810T071139Z.json",
+        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d01_registry_integrity_20260810T071240Z.json",
         "violations": []
       },
       {
         "experiment": "d02_test_suite",
         "skill": "regression-hygiene",
         "verdict": "pass",
-        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d02_test_suite_20260810T071140Z.json",
+        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d02_test_suite_20260810T071241Z.json",
         "violations": []
       },
       {
         "experiment": "d03_orchestration_smoke",
         "skill": "regression-hygiene",
         "verdict": "pass",
-        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d03_orchestration_smoke_20260810T071140Z.json",
+        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d03_orchestration_smoke_20260810T071241Z.json",
         "violations": []
       },
       {
         "experiment": "d04_routing_accuracy",
         "skill": "regression-hygiene",
         "verdict": "pass",
-        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d04_routing_accuracy_20260810T071140Z.json",
+        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d04_routing_accuracy_20260810T071241Z.json",
         "violations": []
       },
       {
         "experiment": "d05_vault_freshness",
         "skill": "knowledge-hygiene",
         "verdict": "pass",
-        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d05_vault_freshness_20260810T071140Z.json",
+        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d05_vault_freshness_20260810T071241Z.json",
         "violations": []
       },
       {
         "experiment": "d06_vault_search_mcp",
         "skill": "knowledge-hygiene",
         "verdict": "pass",
-        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d06_vault_search_mcp_20260810T071140Z.json",
+        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d06_vault_search_mcp_20260810T071242Z.json",
         "violations": []
       },
       {
         "experiment": "d07_structural_classifier",
         "skill": "hot-loop-safety-audit",
         "verdict": "pass",
-        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d07_structural_classifier_20260810T071141Z.json",
+        "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d07_structural_classifier_20260810T071242Z.json",
         "violations": []
       }
     ]
