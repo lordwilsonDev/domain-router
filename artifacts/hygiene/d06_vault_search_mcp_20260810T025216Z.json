@@ -1,0 +1,27 @@
+{
+  "experiment_id": "d06_vault_search_mcp",
+  "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d06_vault_search_mcp_20260810T025216Z.json",
+  "skill": "knowledge-hygiene",
+  "input": "AST contract check: server.py / tool_manifest.json / vault-reindex.py / vault-check.py",
+  "environment": "domain-router repo @ /Users/lordwilson/.hermes/domain-router",
+  "failure_injected": "none \u2014 live contract check of the vault search surface",
+  "expected_behavior": "manifest matches server tools (search_vault, reindex_vault); chunking 3000/200/excludes identical across all three sources",
+  "actual_behavior": "missing file(s): tool_manifest.json \u2014 the gate cannot verify the contract",
+  "latency_ms": 0,
+  "errors": [
+    "missing file(s): tool_manifest.json \u2014 the gate cannot verify the contract"
+  ],
+  "state_before": {
+    "server": "/Users/lordwilson/vault-search-mcp/server.py",
+    "manifest": "/tmp/manifest-drifted.json",
+    "reindex": "/Users/lordwilson/bin/vault-reindex.py",
+    "vault_check": "/Users/lordwilson/bin/vault-check.py"
+  },
+  "state_after": {},
+  "recovery": "fix the drifted file: regenerate the manifest from the server's @mcp.tool() surface, or restore the chunking constants to 3000/200 with the canonical excludes",
+  "false_repair": false,
+  "evidence": [
+    "missing file(s): tool_manifest.json \u2014 the gate cannot verify the contract"
+  ],
+  "verdict": "fail"
+}

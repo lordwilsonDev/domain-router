@@ -1,0 +1,32 @@
+{
+  "experiment_id": "d01_registry_integrity",
+  "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d01_registry_integrity_20260810T070751Z.json",
+  "skill": "registry-hygiene",
+  "input": "build_registry.py --rebuild against the live ~/.hermes/skills tree",
+  "environment": "domain-router repo @ /Users/lordwilson/.hermes/domain-router",
+  "failure_injected": "none \u2014 rebuild-from-live-tree is the integrity probe",
+  "expected_behavior": "all SKILL.md entries present at every depth; zero blank descriptions; zero duplicate skill_ids; hidden dirs excluded; deterministic rebuild",
+  "actual_behavior": "skills=366 containers=47 blank=0 dups=0 hidden=0 deterministic=True",
+  "latency_ms": 234,
+  "errors": [],
+  "state_before": {
+    "domains.json": "rebuilt from live tree",
+    "skill_md_scanned": "live rglob"
+  },
+  "state_after": {
+    "count": 366,
+    "containers": 47,
+    "blank_descriptions": 0,
+    "duplicate_skill_ids": 0,
+    "hidden_leaked": 0,
+    "deterministic": true,
+    "on_disk_matches_build": true
+  },
+  "recovery": "n/a \u2014 read-only verification (rebuild is not a mutation of source)",
+  "false_repair": false,
+  "evidence": [
+    "skills=366 containers=47 deterministic=True on_disk_match=True",
+    "blank=0 dups=0 hidden=0 missing_md=0"
+  ],
+  "verdict": "pass"
+}

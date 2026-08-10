@@ -1,0 +1,45 @@
+{
+  "experiment_id": "d03_orchestration_smoke",
+  "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d03_orchestration_smoke_20260810T024825Z.json",
+  "skill": "regression-hygiene",
+  "input": "orchestration-os scripts/smoke_test.py (13 tests: registry, planner, executor incl. route skill, audit, meta-learner, CLI dry-run, stubbed dispatch)",
+  "environment": "domain-router repo @ /Users/lordwilson/.hermes/domain-router",
+  "failure_injected": "none \u2014 full OS smoke suite is the regression probe",
+  "expected_behavior": "all 13 OS smoke tests pass (0-spend; uses --domain + dry-run only)",
+  "actual_behavior": "exit=0 15/15 passed",
+  "latency_ms": 553,
+  "errors": [],
+  "state_before": {
+    "orchestration_os": "/Users/lordwilson/.hermes/skills/skill-orchestration-os",
+    "smoke_tests": 13,
+    "zero_spend": true,
+    "env_scrubbed": [
+      "DEEPSEEK_API_KEY",
+      "ANTHROPIC_API_KEY",
+      "ANTHROPIC_AUTH_TOKEN",
+      "ANTHROPIC_MODEL",
+      "ANTHROPIC_BASE_URL",
+      "CLAUDE_API_KEY",
+      "CLAUDE_CODE_OAUTH_TOKEN",
+      "OPENAI_API_KEY",
+      "AZURE_OPENAI_API_KEY",
+      "GEMINI_API_KEY",
+      "GOOGLE_API_KEY",
+      "GOOGLE_GENERATIVE_AI_API_KEY",
+      "TAVILY_API_KEY",
+      "GROQ_API_KEY",
+      "MISTRAL_API_KEY"
+    ]
+  },
+  "state_after": {
+    "exit": 0,
+    "passed": true,
+    "summary": "15/15 passed"
+  },
+  "recovery": "n/a \u2014 read-only verification",
+  "false_repair": false,
+  "evidence": [
+    "15/15 passed"
+  ],
+  "verdict": "pass"
+}

@@ -1,0 +1,42 @@
+{
+  "experiment_id": "d05_vault_freshness",
+  "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d05_vault_freshness_20260810T062907Z.json",
+  "skill": "knowledge-hygiene",
+  "input": "~/bin/vault-check.py --fresh (semantic index vs on-disk chunk estimate)",
+  "environment": "domain-router repo @ /Users/lordwilson/.hermes/domain-router",
+  "failure_injected": "none \u2014 live freshness of the wilson-vault index",
+  "expected_behavior": "indexed points >= 90% of on-disk chunk estimate (FRESH)",
+  "actual_behavior": "index FRESH: index=5404 on_disk_files=1191 est_chunks=5411 FRESH",
+  "latency_ms": 483,
+  "errors": [],
+  "state_before": {
+    "vault_check": "/Users/lordwilson/bin/vault-check.py",
+    "scrubbed_env": [
+      "DEEPSEEK_API_KEY",
+      "ANTHROPIC_API_KEY",
+      "ANTHROPIC_AUTH_TOKEN",
+      "ANTHROPIC_MODEL",
+      "ANTHROPIC_BASE_URL",
+      "CLAUDE_API_KEY",
+      "CLAUDE_CODE_OAUTH_TOKEN",
+      "OPENAI_API_KEY",
+      "AZURE_OPENAI_API_KEY",
+      "GEMINI_API_KEY",
+      "GOOGLE_API_KEY",
+      "GOOGLE_GENERATIVE_AI_API_KEY",
+      "TAVILY_API_KEY",
+      "GROQ_API_KEY",
+      "MISTRAL_API_KEY"
+    ]
+  },
+  "state_after": {
+    "stdout": "index=5404 on_disk_files=1191 est_chunks=5411 FRESH"
+  },
+  "recovery": "reindex: vault-check.py --reindex (detached tmux, ~10 min), then --fresh",
+  "false_repair": false,
+  "evidence": [
+    "index FRESH: index=5404 on_disk_files=1191 est_chunks=5411 FRESH",
+    "stdout=index=5404 on_disk_files=1191 est_chunks=5411 FRESH"
+  ],
+  "verdict": "pass"
+}

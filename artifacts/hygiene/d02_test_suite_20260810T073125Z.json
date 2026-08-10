@@ -1,0 +1,26 @@
+{
+  "experiment_id": "d02_test_suite",
+  "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d02_test_suite_20260810T073125Z.json",
+  "skill": "regression-hygiene",
+  "input": "pytest test_router.py -q at repo root",
+  "environment": "domain-router repo @ /Users/lordwilson/.hermes/domain-router",
+  "failure_injected": "none \u2014 full unit suite is the regression probe",
+  "expected_behavior": "all unit tests pass (pytest exit 0)",
+  "actual_behavior": "exit=0 23 passed in 0.10s",
+  "latency_ms": 696,
+  "errors": [],
+  "state_before": {
+    "suite": "test_router.py (registry parse, classify, dispatch, audit, CLI)"
+  },
+  "state_after": {
+    "pytest_exit": 0,
+    "passed": true,
+    "summary": "23 passed in 0.10s"
+  },
+  "recovery": "n/a \u2014 read-only verification",
+  "false_repair": false,
+  "evidence": [
+    "23 passed in 0.10s"
+  ],
+  "verdict": "pass"
+}

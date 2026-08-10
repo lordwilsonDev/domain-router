@@ -1,0 +1,25 @@
+{
+  "experiment_id": "d06_vault_search_mcp",
+  "artifact": "/Users/lordwilson/.hermes/domain-router/artifacts/hygiene/d06_vault_search_mcp_20260810T025345Z.json",
+  "skill": "knowledge-hygiene",
+  "input": "AST contract check: server.py / tool_manifest.json / vault-reindex.py / vault-check.py",
+  "environment": "domain-router repo @ /Users/lordwilson/.hermes/domain-router",
+  "failure_injected": "none \u2014 live contract check of the vault search surface",
+  "expected_behavior": "manifest matches server tools (search_vault, reindex_vault); chunking 3000/200/excludes identical across all three sources",
+  "actual_behavior": "contract drift: manifest matches server tool surface \u2014 manifest matches server tool surface: new tool(s) added to both: ['vault_stats'] -- update EXPECTED_TOOLS in this runner to bless the addition",
+  "latency_ms": 1,
+  "errors": [],
+  "state_before": {
+    "server": "/tmp/three-tool-server.py",
+    "manifest": "/tmp/three-tool-manifest.json",
+    "reindex": "/Users/lordwilson/bin/vault-reindex.py",
+    "vault_check": "/Users/lordwilson/bin/vault-check.py"
+  },
+  "state_after": {},
+  "recovery": "fix the drifted file: regenerate the manifest from the server's @mcp.tool() surface, or restore the chunking constants to 3000/200 with the canonical excludes",
+  "false_repair": false,
+  "evidence": [
+    "contract drift: manifest matches server tool surface \u2014 manifest matches server tool surface: new tool(s) added to both: ['vault_stats'] -- update EXPECTED_TOOLS in this runner to bless the addition"
+  ],
+  "verdict": "fail"
+}
