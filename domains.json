@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-10T06:26:50+00:00",
-  "count": 366,
+  "generated_at": "2026-08-10T07:28:55+00:00",
+  "count": 367,
   "containers": [
     "ai-systems-field-consultant",
     "apple",
@@ -41,6 +41,7 @@
     "sovereign-architecture",
     "sovereign-mcp-intelligence-gateway",
     "sovereign-prompt-architect",
+    "sovereign-verification",
     "sovereignty",
     "srse-deliverables",
     "strategy",
@@ -2874,6 +2875,14 @@
       "container": "sovereign-prompt-architect",
       "dir": "/Users/lordwilson/.hermes/skills/sovereign-prompt-architect",
       "skill_md": "/Users/lordwilson/.hermes/skills/sovereign-prompt-architect/SKILL.md"
+    },
+    {
+      "skill_id": "sovereign-verification",
+      "name": "sovereign-verification",
+      "description": "Build, audit, and operate the Sovereign Verification Ledger and temporal epistemic graph. Use when designing claim-evidence-freshness-verdict systems, fixing fragmented CI/skills/MoIE evidence, enforcing negative evidence and tier boundaries, generating constellation status, or creating matching ver",
+      "container": "sovereign-verification",
+      "dir": "/Users/lordwilson/.hermes/skills/sovereign-verification",
+      "skill_md": "/Users/lordwilson/.hermes/skills/sovereign-verification/SKILL.md"
     },
     {
       "skill_id": "sovereignty/sovereign-agi-harness",
