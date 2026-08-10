@@ -57,45 +57,6 @@ jobs:
       - name: Install pytest
         run: pip install -q pytest
 
-      - name: TEMP-DIAG GH_PAT type + probe (remove after diagnosis)
-        if: env.GH_PAT != ''
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
-        run: |
-          case "$GH_PAT" in
-            ghp_*) echo "GH_PAT type: classic";;
-            github_pat_*) echo "GH_PAT type: fine-grained";;
-            *) echo "GH_PAT type: other";;
-          esac
-          echo "GH_PAT length: ${#GH_PAT}"
-          echo -n "$GH_PAT" | shasum -a 256 | cut -c1-16 | xargs echo 'GH_PAT sha256-16:'
-          echo '--- probe scheme 1: x-access-token ---'
-          git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" 2>&1 | head -3
-          echo '--- probe scheme 2: oauth2 ---'
-          git ls-remote "https://oauth2:${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" 2>&1 | head -3
-          echo '--- probe scheme 3: token-as-user ---'
-          git ls-remote "https://${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" 2>&1 | head -3
-          echo '--- api check ---'
-          GH_TOKEN="$GH_PAT" gh api repos/lordwilsonDev/vault-tooling -q .full_name 2>&1 | head -2
-          echo '--- runner git config (global) ---'
-          git config --global --list 2>/dev/null | grep -iE 'credential|url\.|insteadof|extraheader|proxy' | head -6
-          echo '--- raw smart-http probe (curl, Bearer) ---'
-          curl -s -o /dev/null -w 'http=%{http_code}\n' -H "Authorization: Bearer ${GH_PAT}" "https://github.com/lordwilsonDev/vault-tooling.git/info/refs?service=git-upload-pack"
-          echo '--- git version ---'
-          git --version
-          echo '--- control: ls-remote to skill-orchestration-os (token PROVEN to read it via checkout) ---'
-          git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/skill-orchestration-os.git" 2>&1 | head -3
-          echo '--- basic-auth curl to vault-tooling (the way git authenticates) ---'
-          curl -s -o /dev/null -w 'http=%{http_code}\n' -u "x-access-token:${GH_PAT}" "https://github.com/lordwilsonDev/vault-tooling.git/info/refs?service=git-upload-pack"
-          echo '--- git env vars ---'
-          env | grep -iE 'GIT_|GITHUB_TOKEN|GH_TOKEN' | sed 's/=.*/=<set>/' | head -8
-          echo '--- git config all levels (redacted values) ---'
-          git config --show-origin --list 2>/dev/null | sed -E 's/(password|token|header) ?= ?.*/\1=<redacted>/I' | grep -iE 'credential|extraheader|url\.|insteadof|http\.' | head -8
-          echo '--- FIX-A: run probe from outside the workspace (no local extraheader) ---'
-          (cd "$HOME" && git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" 2>&1 | head -2)
-          echo '--- FIX-B: clear extraheader with exact key ---'
-          git -c 'http.https://github.com/.extraheader=' ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" 2>&1 | head -2
-
       - name: Checkout skill-orchestration-os (canonical runtime)
         if: env.GH_PAT != ''
         env:
@@ -120,17 +81,30 @@ jobs:
           python scripts/hygiene/d04_routing_accuracy_runner.py > /tmp/d04.json 2>&1 || { echo 'd04 runner failed:'; tail -20 /tmp/d04.json; exit 1; }
           python -c 'import json; d=json.load(open("/tmp/d04.json")); print("d04:", d["mode"], "|", d["verdict"], "|", d["actual_behavior"]); assert d["mode"] == "replay" and d["verdict"] == "pass", d["errors"]'
 
+      # NOTE: probes use curl, NOT git ls-remote. The runner image's git
+      # config injects an Authorization header (from actions/checkout's
+      # persisted credentials) that overrides the URL-embedded token, so a
+      # raw `git ls-remote` from inside the workspace always sees
+      # "Repository not found" even with a valid PAT (the PAT itself is fine:
+      # curl with the same basic-auth creds returns 200). The actual clones
+      # use actions/checkout with the token, which handles auth correctly
+      # (proven by the d02/d04 skill-orchestration-os checkout).
+      # http 200 = readable, 401/404 = not (unpushed or no read access).
       - name: Probe vault-search-mcp (contract sources on GitHub?)
         if: env.GH_PAT != ''
         id: probe-vault-search-mcp
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          # No HEAD ref on purpose: ls-remote on a freshly pushed EMPTY repo
-          # would fail on a HEAD ref and falsely report available=false.
-          git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-search-mcp.git" >/dev/null 2>&1 \
-            && echo available=true >> "$GITHUB_OUTPUT" \
-            || echo available=false >> "$GITHUB_OUTPUT"
+          code=$(curl -s -o /dev/null -w '%{http_code}' \
+            -u "x-access-token:${GH_PAT}" \
+            "https://github.com/lordwilsonDev/vault-search-mcp.git/info/refs?service=git-upload-pack")
+          if [ "$code" = "200" ]; then
+            echo available=true >> "$GITHUB_OUTPUT"
+          else
+            echo "probe vault-search-mcp: http=$code"
+            echo available=false >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Probe vault-tooling (bin tooling on GitHub?)
         if: env.GH_PAT != ''
@@ -138,9 +112,15 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git ls-remote "https://x-access-token:${GH_PAT}@github.com/lordwilsonDev/vault-tooling.git" >/dev/null 2>&1 \
-            && echo available=true >> "$GITHUB_OUTPUT" \
-            || echo available=false >> "$GITHUB_OUTPUT"
+          code=$(curl -s -o /dev/null -w '%{http_code}' \
+            -u "x-access-token:${GH_PAT}" \
+            "https://github.com/lordwilsonDev/vault-tooling.git/info/refs?service=git-upload-pack")
+          if [ "$code" = "200" ]; then
+            echo available=true >> "$GITHUB_OUTPUT"
+          else
+            echo "probe vault-tooling: http=$code"
+            echo available=false >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Checkout vault-search-mcp (server + manifest contract)
         if: env.GH_PAT != '' && steps.probe-vault-search-mcp.outputs.available == 'true'
